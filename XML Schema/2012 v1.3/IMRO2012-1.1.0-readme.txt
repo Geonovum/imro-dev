@@ -1,0 +1,18 @@
+Dit XML Schema hoort bij het Informatiemodel Ruimtelijke Ordening 2012
+Modeldocument: beschrijving van het model. Versie 1.1
+
+In dit bestand zitten de schema's voor lokale installatie van IMRO2012 v 1.1.0.
+
+Deze zijn identiek aan de remote schema's op:
+http://schemas.geonovum.nl/imro/2012/1.1/IMRO2012.xsd
+
+De verwijzing naar het remote schema is de officiele implementatie van IMRO2012.
+
+
+1. IMRO2012.xsd XML Schema versie 1.1.0 voor lokale installatie
+
+2. functieaanduidingen.xsd XML Schema versie 1.1.0 van de functielijst.
+
+3. matrixsymboolcode.xsd XML Schema versie 1.1.0 van de matrix symbolen. (niet normatief)
+
+De GML schema's zijn niet lokaal gemaakt.

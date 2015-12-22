@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- =================================================================== -->
+<!--                                                              lokale versie                                                         -->
+<!--                                         IMRO2012 - matrixsymbool open enumeratie v1.1.0                              -->
+<!--                                           geen onderdeel van RO Standaarden 2012                                -->
+<!-- =================================================================== -->
+<!-- Remote versie op:																											 -->
+<!-- http://schemas.geonovum.nl/imro/2012/1.1/matrixsymboolcode.xsd                                                   -->
+<!-- =================================================================== -->
+<!-- Geonovum, Beheerorganisatie RO-Standaarden. http://ro-standaarden.geonovum.nl -->
+<!-- =================================================================== -->
+<!-- Versie info -->
+<!-- 20120209 gepubliceerd -->
+<!-- namespace van 1.0 naar 1.1 -->
+<!-- patroon other:  \w{2,} naar other: \w+ -->
+<!-- s128af toegevoegd -->
+<!-- 20120104: gepubliceerd -->
+<!-- 20111228 -->
+<!-- encoding van windows-1252 naar UTF-8 -->
+<!-- lijst gekopieerd uit IMRO2012 0.0.4 -->
+<!-- =================================================================== -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:imro="http://www.geonovum.nl/imro/2012/1.1" targetNamespace="http://www.geonovum.nl/imro/2012/1.1" elementFormDefault="qualified" version="1.1.0">
+	<!--XML Schema document created by ShapeChange-->
+	<simpleType name="SymboolCodeMatrixType">
+		<union memberTypes="imro:SymboolCodeMatrixEnumerationType imro:SymboolCodeMatrixOtherType"/>
+	</simpleType>
+	<simpleType name="SymboolCodeMatrixEnumerationType">
+		<restriction base="string">
+			<enumeration value="s100"/>
+			<enumeration value="s101"/>
+			<enumeration value="s102"/>
+			<enumeration value="s103"/>
+			<enumeration value="s104"/>
+			<enumeration value="s105"/>
+			<enumeration value="s106"/>
+			<enumeration value="s107"/>
+			<enumeration value="s108"/>
+			<enumeration value="s109"/>
+			<enumeration value="s110"/>
+			<enumeration value="s111"/>
+			<enumeration value="s112"/>
+			<enumeration value="s113"/>
+			<enumeration value="s114"/>
+			<enumeration value="s115"/>
+			<enumeration value="s116"/>
+			<enumeration value="s117"/>
+			<enumeration value="s118"/>
+			<enumeration value="s119"/>
+			<enumeration value="s120"/>
+			<enumeration value="s121"/>
+			<enumeration value="s122"/>
+			<enumeration value="s123"/>
+			<enumeration value="s124"/>
+			<enumeration value="s125"/>
+			<enumeration value="s126"/>
+			<enumeration value="s127"/>
+			<enumeration value="s128a"/>
+			<enumeration value="s128b"/>
+			<enumeration value="s128c"/>
+			<enumeration value="s128d"/>
+			<enumeration value="s128e"/>
+			<enumeration value="s128f"/>
+			<enumeration value="s128g"/>
+			<enumeration value="s128h"/>
+			<enumeration value="s128i"/>
+			<enumeration value="s128j"/>
+			<enumeration value="s128k"/>
+			<enumeration value="s128l"/>
+			<enumeration value="s128m"/>
+			<enumeration value="s128n"/>
+			<enumeration value="s128o"/>
+			<enumeration value="s128p"/>
+			<enumeration value="s128q"/>
+			<enumeration value="s128r"/>
+			<enumeration value="s128s"/>
+			<enumeration value="s128t"/>
+			<enumeration value="s128u"/>
+			<enumeration value="s128v"/>
+			<enumeration value="s128w"/>
+			<enumeration value="s128x"/>
+			<enumeration value="s128y"/>
+			<enumeration value="s128z"/>
+			<enumeration value="s128aa"/>
+			<enumeration value="s128ab"/>
+			<enumeration value="s128ac"/>
+			<enumeration value="s128ad"/>
+			<enumeration value="s128ae"/>
+			<enumeration value="s128af"/>
+			<enumeration value="s129a"/>
+			<enumeration value="s129b"/>
+			<enumeration value="s129c"/>
+			<enumeration value="s129d"/>
+			<enumeration value="s129e"/>
+			<enumeration value="s129f"/>
+			<enumeration value="s129g"/>
+			<enumeration value="s129h"/>
+			<enumeration value="s129i"/>
+			<enumeration value="s129j"/>
+			<enumeration value="s129k"/>
+			<enumeration value="s129l"/>
+			<enumeration value="s129m"/>
+			<enumeration value="s129n"/>
+			<enumeration value="s129o"/>
+			<enumeration value="s129p"/>
+			<enumeration value="s129q"/>
+			<enumeration value="s129r"/>
+			<enumeration value="s129s"/>
+			<enumeration value="s129t"/>
+			<enumeration value="s129u"/>
+			<enumeration value="s129v"/>
+			<enumeration value="s129w"/>
+			<enumeration value="s129x"/>
+			<enumeration value="s129y"/>
+			<enumeration value="s129z"/>
+			<enumeration value="s129aa"/>
+			<enumeration value="s129ab"/>
+			<enumeration value="s130a"/>
+			<enumeration value="s130b"/>
+			<enumeration value="s130c"/>
+			<enumeration value="s130d"/>
+			<enumeration value="s130e"/>
+			<enumeration value="s130f"/>
+			<enumeration value="s130g"/>
+			<enumeration value="s130h"/>
+			<enumeration value="s130i"/>
+			<enumeration value="s130j"/>
+			<enumeration value="s130k"/>
+			<enumeration value="s130l"/>
+			<enumeration value="s130m"/>
+			<enumeration value="s130n"/>
+			<enumeration value="s130o"/>
+			<enumeration value="s130p"/>
+			<enumeration value="s130q"/>
+			<enumeration value="s130r"/>
+			<enumeration value="s130s"/>
+			<enumeration value="s130t"/>
+			<enumeration value="s130u"/>
+			<enumeration value="s130v"/>
+			<enumeration value="s130w"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="SymboolCodeMatrixOtherType">
+		<restriction base="string">
+			<pattern value="other: \w+"/>
+		</restriction>
+	</simpleType>
+</schema>
