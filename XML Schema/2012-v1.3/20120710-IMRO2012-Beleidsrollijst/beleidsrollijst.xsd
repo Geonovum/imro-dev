@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Paul Janssen (Geonovum) -->
+<!-- =================================================================== -->
+<!--                                                            lokale versie                                                            -->
+<!--                                                     IMRO2012 - beleidsrollijst open enumeratie  v1.0.0                  -->
+<!--                                            onderdeel van implementatie RO Standaarden 2012                   -->
+<!-- =================================================================== -->
+<!-- Remote versie op:																											 -->
+<!-- http://schemas.geonovum.nl/imro/2012/1.1/rollenlijst.xsd                                        -->
+<!-- =================================================================== -->
+<!-- Geonovum, Beheerorganisatie RO-Standaarden. http://ro-standaarden.geonovum.nl -->
+<!-- =================================================================== -->
+<!-- Versie info -->
+<!-- 20120710 gepubliceerd -->
+<!-- =================================================================== -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:imro="http://www.geonovum.nl/imro/2012/1.1" targetNamespace="http://www.geonovum.nl/imro/2012/1.1" elementFormDefault="qualified" version="1.0.0">
+	<!--XML Schema document created by ShapeChange-->
+	<simpleType name="RollenType">
+		<union memberTypes="imro:RollenEnumerationType imro:RollenOtherType"/>
+	</simpleType>
+	<simpleType name="RollenEnumerationType">
+		<restriction base="string">
+			<enumeration value="agenderend"/>
+			<enumeration value="begrenzend"/>
+			<enumeration value="behoudend"/>
+			<enumeration value="beschermend"/>
+			<enumeration value="coordinerend"/>
+			<enumeration value="faciliterend"/>
+			<enumeration value="kaderstellend"/>
+			<enumeration value="onderzoekend"/>
+			<enumeration value="ontwikkelend"/>
+			<enumeration value="ordenend"/>
+			<enumeration value="participerend"/>
+			<enumeration value="regisserend"/>
+			<enumeration value="stimulerend"/>
+			<enumeration value="sturend"/>
+			<enumeration value="uitvoerend"/>
+			<enumeration value="versterkend"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="RollenOtherType">
+		<restriction base="string">
+			<pattern value="other: .*"/>
+		</restriction>
+	</simpleType>
+</schema>

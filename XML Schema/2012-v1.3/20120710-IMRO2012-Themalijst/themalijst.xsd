@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- =================================================================== -->
+<!--                                                            lokale versie                                                            -->
+<!--                                                     IMRO2012 - themalijst open enumeratie  v1.1.1                  -->
+<!--                                            onderdeel van implementatie RO Standaarden 2012                   -->
+<!-- =================================================================== -->
+<!-- Remote versie op:																											 -->
+<!-- http://schemas.geonovum.nl/imro/2012/1.1/themalijst.xsd                                        -->
+<!-- =================================================================== -->
+<!-- Geonovum, Beheerorganisatie RO-Standaarden. http://ro-standaarden.geonovum.nl -->
+<!-- =================================================================== -->
+<!-- Versie info -->
+<!-- 20120710 gepubliceerd -->
+<!-- themalijst is geupdate met toevoeging van een aantal waarden -->
+<!-- 20120418 gepubliceerd -->
+<!-- opmerking: lijst is identiek aan thema uit de praktijkrichtlijnen van 2008                            -->
+<!-- =================================================================== -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:imro="http://www.geonovum.nl/imro/2012/1.1" targetNamespace="http://www.geonovum.nl/imro/2012/1.1" elementFormDefault="qualified" version="1.1.1">
+	<!--XML Schema document created by ShapeChange-->
+	<simpleType name="ThemalijstType">
+		<union memberTypes="imro:ThemalijstEnumerationType imro:ThemalijstOtherType"/>
+	</simpleType>
+	<simpleType name="ThemalijstEnumerationType">
+		<restriction base="string">
+			<enumeration value="aardkunde"/>
+			<enumeration value="archeologie"/>
+			<enumeration value="bedrijven"/>
+			<enumeration value="bodem"/>
+			<enumeration value="cultuurhistorie"/>
+			<enumeration value="dagrecreatie"/>
+			<enumeration value="defensie"/>
+			<enumeration value="duurzaamheid"/>
+			<enumeration value="ecologie"/>
+			<enumeration value="economie"/>
+			<enumeration value="energie"/>
+			<enumeration value="grondstoffen"/>
+			<enumeration value="infrastructuur"/>
+			<enumeration value="kabels/leidingen"/>
+			<enumeration value="landbouw"/>
+			<enumeration value="landschap"/>
+			<enumeration value="langzaam verkeer"/>
+			<enumeration value="luchtvaart"/>
+			<enumeration value="milieu"/>
+			<enumeration value="natuur"/>
+			<enumeration value="openbaar vervoer"/>
+			<enumeration value="recreatie"/>
+			<enumeration value="snelverkeer"/>
+			<enumeration value="sociaal"/>
+			<enumeration value="spoor"/>
+			<enumeration value="vaarweg"/>
+			<enumeration value="veiligheid"/>
+			<enumeration value="verblijfsrecreatie"/>
+			<enumeration value="verkeer"/>
+			<enumeration value="verstedelijking"/>
+			<enumeration value="vervoer"/>
+			<enumeration value="visserij"/>
+			<enumeration value="voorzieningen"/>
+			<enumeration value="water"/>
+			<enumeration value="waterkering"/>
+			<enumeration value="waterkwaliteit"/>
+			<enumeration value="waterkwantiteit"/>
+			<enumeration value="weg"/>
+			<enumeration value="wonen"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="ThemalijstOtherType">
+		<restriction base="string">
+			<pattern value="other: .*"/>
+		</restriction>
+	</simpleType>
+</schema>
