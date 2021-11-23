@@ -1,6 +1,8 @@
 # Logische Regels Validatie Overgangsrecht + TAM 
 
-versie 16-11-2022
+versie 23-11-2022
+
+'TAM-Omgevingsplan' ==> 'TAM-omgevingsplan'
 
 ## Uitgangspunten
 - Validatieregels Overgangsrecht + TAM zijn aanvullend op de huidige validaties om herlaad-acties te blijven ondersteunen.
@@ -76,7 +78,7 @@ versie 16-11-2022
 
 ### bestemmingsplan
 - per 1-7-2022 doorlaten als planstatus= 'vastgesteld', anders blokkeren
-- tenzij naam = 'TAM-Omgevingsplan[spatie][plannaam]'
+- tenzij naam = 'TAM-omgevingsplan[spatie][plannaam]'
 
 ### exploitatieplan
 - per 1-7-2022 doorlaten als planstatus= 'vastgesteld', anders blokkeren
