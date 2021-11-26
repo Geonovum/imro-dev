@@ -1,8 +1,11 @@
 # Logische Regels Validatie Overgangsrecht + TAM 
 
-versie 23-11-2022
+versie 26-11-2022
 
 'TAM-Omgevingsplan' ==> 'TAM-omgevingsplan'
+Plantype 'AMvB' ==> 'amvb'
+regel voor omgevingsvergunning: 'Blokkeren per 1-7-2022' ==> '(geen aanpassing validatie)' in beide scenario's
+
 
 ## Uitgangspunten
 - Validatieregels Overgangsrecht + TAM zijn aanvullend op de huidige validaties om herlaad-acties te blijven ondersteunen.
@@ -14,7 +17,7 @@ versie 23-11-2022
 ### aanwijzingsbesluit
 - (geen aanpassing validatie)
 
-### AMvB
+### amvb
 - Blokkeren per 1-7-2022
 
 ### beheersverordening
@@ -33,7 +36,7 @@ versie 23-11-2022
 - per 1-7-2022 doorlaten als planstatus= 'vastgesteld', anders blokkeren
 
 ### omgevingsvergunning
-- Blokkeren per 1-7-2022
+- (geen aanpassing validatie)
 
 ### projectbesluit
 - Blokkeren per 1-7-2022
@@ -70,7 +73,7 @@ versie 23-11-2022
 ### aanwijzingsbesluit
 - (geen aanpassing validatie)
 
-### AMvB
+### amvb
 - Blokkeren per 1-7-2022
 
 ### beheersverordening
@@ -90,7 +93,7 @@ versie 23-11-2022
 - per 1-7-2022 doorlaten als planstatus= 'vastgesteld', anders blokkeren
 
 ### omgevingsvergunning
-- Blokkeren per 1-7-2022
+- (geen aanpassing validatie)
 
 ### projectbesluit
 - Blokkeren per 1-7-2022
