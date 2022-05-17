@@ -4,10 +4,10 @@
     
     <iso:ns prefix="imro" uri="http://www.geonovum.nl/imro/2012/1.1"/>
     <iso:ns prefix="imro2008" uri="http://www.geonovum.nl/imro/2008/1"/>
-    <iso:ns prefix="gml" uri="http://www.opengis.net/gml/3.2"/>
+    <iso:ns prefix="gml" uri="http://www.opengis.net/gml/3.2"/>    
     
+    <!-- BEGIN Validaties t.b.v. Tijdelijke Alternatieve Maatregel c.q. Overgangsrecht Omgevingswet -->
     <iso:let name="identificatie" value="@gml:id"/>
-    
     <iso:pattern id="TAM">   
         
         <iso:rule context="//imro:Bestemmingsplangebied">
@@ -62,14 +62,14 @@
         
         <iso:rule context="//imro:Besluitgebied_X"> 
             
-            <!-- Blokkeren AANWIJZINGSBESLUIT en BEHEERSVERORDENING en EXPLOITATIEPLAN en GERECHTELIJKE UITSPRAAK en OMGEVINGSVERGUNNING en REACTIEVE AANWIJZING-->
-            <!-- Na 2022-07-01 mag voor objecttype Besluitgebied_X typePlan niet zijn 'aanwijzigingsbesluit' of 'beheersverordening' of 'exploitatieplan' of 'gerechtelijke uitspraak' of 'omgevingsvergunning' of 'reactieve aanwijzing' of 'voorbereidingsbesluit'-->        
+            <!-- Blokkeren AANWIJZINGSBESLUIT en BEHEERSVERORDENING en REACTIEVE AANWIJZING-->
+            <!-- Na 2022-07-01 mag voor objecttype Besluitgebied_X typePlan niet zijn 'aanwijzigingsbesluit' of 'beheersverordening' of 'reactieve aanwijzing'-->        
             <iso:assert test="if (number(replace(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) >= 20220701) 
-                then imro:typePlan != 'aanwijzingsbesluit' and imro:typePlan != 'beheersverordening' and imro:typePlan != 'exploitatieplan' and imro:typePlan != 'gerechtelijke uitspraak' and imro:typePlan != 'omgevingsvergunning' and imro:typePlan != 'reactieve aanwijzing' and imro:typePlan !='voorbereidingsbesluit'
+                then imro:typePlan != 'aanwijzingsbesluit' and imro:typePlan != 'beheersverordening' and imro:typePlan != 'reactieve aanwijzing'
                 else imro:typePlan">
                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>, type = <iso:value-of select="name()"/>:
                 Fout in typePlan -> Als imro:datum is groter dan of gelijk aan 2022-07-01, 
-                dan mag typePlan niet zijn 'aanwijzigingsbesluit' of 'beheersverordening' of 'exploitatieplan' of 'gerechtelijke uitspraak' of 'omgevingsvergunning' of 'reactieve aanwijzing' of 'voorbereidingsbesluit'.   
+                dan mag typePlan niet zijn 'aanwijzigingsbesluit' of 'beheersverordening' of 'reactieve aanwijzing'.   
             </iso:assert>
             
             <!-- Blokkeren VOORBEREIDINGSBESLUIT niet zijnde TAM-Voorbereidingsbesluit-->
@@ -84,7 +84,7 @@
             
             <!-- Blokkeren EXPLOITATIEPLAN met status ONTWERP -->
             <!-- Na 2022-07-01 mag voor objecttype Besluitgebied_X met typePlan 'exploitatieplan' niet hebben status 'ontwerp'-->        
-            <iso:assert test="if (number(replace(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) >= 20220701 and imro:tyePlan = 'exploitatieplan') 
+            <iso:assert test="if (number(replace(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) >= 20220701 and imro:typePlan = 'exploitatieplan') 
                 then imro:planstatusInfo/imro:PlanstatusEnDatum/imro:planstatus != 'ontwerp'
                 else imro:planstatusInfo/imro:PlanstatusEnDatum/imro:planstatus">
                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>, type = <iso:value-of select="name()"/>:
@@ -93,8 +93,7 @@
             </iso:assert>
             
         </iso:rule>
-        
-        <iso:rule context="//imro2008:Besluitgebied_X"> 
+                <iso:rule context="//imro2008:Besluitgebied_X"> 
            
             <!-- LET OP: IMRO2008 -->
             <!-- Blokkeren PROJECTBESLUIT en TIJDELIJK ONTHEFFING BUITENPLANS-->
@@ -124,4 +123,5 @@
         </iso:rule>
         
     </iso:pattern>
+    <!-- EINDE Validaties t.b.v. Tijdelijke Alternatieve Maatregel c.q. Overgangsrecht Omgevingswet -->
 </iso:schema>
