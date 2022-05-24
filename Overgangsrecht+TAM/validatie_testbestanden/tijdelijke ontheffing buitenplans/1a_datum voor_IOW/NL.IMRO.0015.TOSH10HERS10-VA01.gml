@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Dit bestand is gegenereerd met PlanpROces versie 1.3.2.32998-->
-<imro:FeatureCollectionIMRO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geonovum.nl/imro/2008/1 file://localhost/J:/GTG-Dezta/Apps/PlanpROces/Schemas/local-IMRO2008.xsd" gml:id="ID_22_VA01" xmlns:gml4nl="http://www.geonovum.nl/gml4nl/1.0" xmlns:imro="http://www.geonovum.nl/imro/2008/1" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink">
+<imro:FeatureCollectionIMRO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geonovum.nl/imro/2008/1 https://register.geostandaarden.nl/xmlschema/imro/2008-v1.1/local-IMRO2008.xsd" gml:id="ID_22_VA01" xmlns:gml4nl="http://www.geonovum.nl/gml4nl/1.0" xmlns:imro="http://www.geonovum.nl/imro/2008/1" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink">
   <imro:featureMember>
     <imro:Besluitvlak_X gml:id="NL.IMRO.1">
       <imro:identificatie>NL.IMRO.1</imro:identificatie>
