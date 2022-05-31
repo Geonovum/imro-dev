@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 /*******************************************************************************
- * File: additional-validator-rules-2012v0.08-b-RC.sch
+ * File: additional-validator-rules2012v0.07.sch
  * (C) Logica, 2011
  * 2018: Geonovum, Thijs Brentjens
- * 2022: Geonovum, Arnoud de Boer
  *
  * Info:
  * Extra Schematron Validation Document for IMRO 2012
@@ -27,7 +26,7 @@
  * 27-09-2012   RD  Additional check AD80. Fields imro:naam may not be empty.
  * 16-04-2018   TB  Thijs Brentjens. Additional check. For plantype + overheid
  * 30-10-2018	GD	Geodan/Kadaster. various corrections on 'Additional check. For plantype + overheid' implemented RPnl v.2.4.2.3 dd.29-10-2018.
- * 23-05-2022   AdB Overgangsrecht Ow + TAM validation rules by XSLT-1
+ * 23-05-2022   AdB TAM validation rules by XSLT-1
  ******************************************************************************/
 
 Opmerkingen / hints:
