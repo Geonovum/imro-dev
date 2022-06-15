@@ -55,6 +55,7 @@ Opmerkingen / hints:
 	<iso:ns prefix="gml" uri="http://www.opengis.net/gml/3.2"/>
 	<iso:ns prefix="nen3610" uri="http://www.ravi.nl/nen3610"/>
 	<iso:ns prefix="imro" uri="http://www.geonovum.nl/imro/2012/1.1"/>
+	<iso:ns prefix="imro2008" uri="http://www.geonovum.nl/imro/2008/1"/>
 	<iso:ns prefix="xlink" uri="http://www.w3.org/1999/xlink"/>
 
 	<iso:let name="upperCase" value="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
