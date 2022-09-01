@@ -28,6 +28,7 @@
  * 16-04-2018   TB  Thijs Brentjens. Additional check. For plantype + overheid
  * 30-10-2018	GD	Geodan/Kadaster. various corrections on 'Additional check. For plantype + overheid' implemented RPnl v.2.4.2.3 dd.29-10-2018.
  * 23-05-2022   AdB Overgangsrecht Ow + TAM validation rules by XSLT-1
+ * 26-08-2022	AdB Aanpassingen naar aanleiding van uitgevoerde test dd. 04-07-2022
  ******************************************************************************/
 
 Opmerkingen / hints:
