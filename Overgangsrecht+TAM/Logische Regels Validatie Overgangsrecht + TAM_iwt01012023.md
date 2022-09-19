@@ -2,8 +2,8 @@
 
 versie 19-09-2022
 
-Overgangrecht Wro -> Omgevingswet => sceanrio A
-Aanvullend TAM => sceanrio B 
+Overgangrecht Wro -> Omgevingswet => scenario A
+Aanvullend TAM => scenario B 
 
 
 ## Uitgangspunten
@@ -107,9 +107,9 @@ Onderdeel van overgangsrecht: afmaken bestemmingsplan procedure na iwt Omgevings
 - geen aanpassing validatieregels
 
 ### inpassingsplan
-Wro impassingsplan is bestemmingsplan dat alleen door het Rijk en alleen met planstatus vastgesteld kan worden gepubliceerd tot iwt Omgevingswet.
+Wro impassingsplan is bestemmingsplan dat alleen door het Rijk kan worden gepubliceerd tot iwt Omgevingswet.
 Dit plantype wordt door TAM gebruikt voor het Omgevingswet instrument projectbesluit 
-- Nieuwe upload blokkeren per 1-1-2023
+- vanaf 1-1-2023 doorlaten als planstatus= 'vastgesteld' of 'geconsolideerd', anders upload blokkeren
 - tenzij vanaf 1-1-2023 plannaam= 'TAM-projectbesluit[spatie][plannaam]'
 
 ### omgevingsvergunning
