@@ -8,7 +8,7 @@ Aanvullend TAM => scenario B
 
 
 ## Uitgangspunten
-Validatieregels Overgangsrecht + TAM zijn aanvullend op de huidige validaties van IMRO, STRI etc., versies 2012, 2008 etc. om herlaad acties in Ruimtelijkeplannen.nl voor uitsluitend gemeenten te te blijven ondersteunen.
+Validatieregels Overgangsrecht + TAM zijn aanvullend op de huidige validaties van IMRO, STRI etc., versies 2012, 2008 etc. om herlaad acties in Ruimtelijkeplannen.nl voor uitsluitend gemeenten te blijven ondersteunen.
 
 
 ## Logische regels Wro instrumenten - Overgangrecht: Scenario A  
