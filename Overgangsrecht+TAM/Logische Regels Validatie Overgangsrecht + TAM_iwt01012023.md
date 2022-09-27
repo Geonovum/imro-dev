@@ -1,14 +1,13 @@
 # Logische Regels Validatie Overgangsrecht + TAM 
 
-versie 19-09-2022
+versie 27-09-2022
 
-Overgangrecht Wro -> Omgevingswet => scenario A
-
-Aanvullend TAM => scenario B 
+Overgangrecht Wro -> Omgevingswet => sceanrio A
+Aanvullend TAM => sceanrio B 
 
 
 ## Uitgangspunten
-Validatieregels Overgangsrecht + TAM zijn aanvullend op de huidige validaties van IMRO, STRI etc., versies 2012, 2008 etc. om herlaad acties in Ruimtelijkeplannen.nl voor uitsluitend gemeenten te blijven ondersteunen.
+- Validatieregels Overgangsrecht + TAM zijn aanvullend op de huidige validaties van 2012, 2008 etc van IMRO, STRI etc om herlaad-acties (uitsluitend gemeenten)te blijven ondersteunen.
 
 
 ## Logische regels Wro instrumenten - Overgangrecht: Scenario A  
@@ -108,9 +107,9 @@ Onderdeel van overgangsrecht: afmaken bestemmingsplan procedure na iwt Omgevings
 - geen aanpassing validatieregels
 
 ### inpassingsplan
-Wro impassingsplan is bestemmingsplan dat alleen door het Rijk kan worden gepubliceerd tot iwt Omgevingswet.
+Wro impassingsplan is bestemmingsplan dat alleen door het Rijk en alleen met planstatus vastgesteld kan worden gepubliceerd tot iwt Omgevingswet.
 Dit plantype wordt door TAM gebruikt voor het Omgevingswet instrument projectbesluit 
-- vanaf 1-1-2023 doorlaten als planstatus= 'vastgesteld' of 'geconsolideerd', anders upload blokkeren
+- Nieuwe upload blokkeren per 1-1-2023
 - tenzij vanaf 1-1-2023 plannaam= 'TAM-projectbesluit[spatie][plannaam]'
 
 ### omgevingsvergunning
@@ -137,6 +136,7 @@ Dit is het Wro instrument voluit ministeriele regeling; in IMRO2012 geduid als r
 
 ### structuurvisie
 - Nieuwe upload blokkeren per 1-1-2023
+(**Nog ter discussie:** is dit plantype niet nodig om omgevingsvisie vooruitlopend op Ow te publiceren???)
 
 ### tijdelijke ontheffing buitenplans
 Dit is een voormalig Wro instrument; met iwt Wabo omgevingsvergunning geworden. Dus tijdelijk ontheffing buitenplans wel in IMRO2008, niet IMRO2012. In IMRO2012 daarvoor in de plaats de omgevingsvergunning. 
