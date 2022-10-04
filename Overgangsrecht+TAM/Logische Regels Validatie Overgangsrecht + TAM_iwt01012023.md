@@ -1,6 +1,6 @@
 # Logische Regels Validatie Overgangsrecht + TAM 
 
-versie 27-09-2022
+versie 4-10-2022
 
 Overgangrecht Wro -> Omgevingswet => sceanrio A
 
@@ -135,8 +135,8 @@ Dit is het Wro instrument voluit ministeriele regeling; in IMRO2012 geduid als r
 - Nieuwe upload blokkeren per 1-1-2023
 
 ### structuurvisie
-- Nieuwe upload blokkeren per 1-1-2023
-(**Nog ter discussie:** is dit plantype niet nodig om omgevingsvisie vooruitlopend op Ow te publiceren???)
+Dit plantype vervalt per itw Omgevingswet; onder de Omgevingswet is dit het instrument omgevingsvisie. 
+- (vooralsnog) geen aanpassing validatieregels
 
 ### tijdelijke ontheffing buitenplans
 Dit is een voormalig Wro instrument; met iwt Wabo omgevingsvergunning geworden. Dus tijdelijk ontheffing buitenplans wel in IMRO2008, niet IMRO2012. In IMRO2012 daarvoor in de plaats de omgevingsvergunning. 
