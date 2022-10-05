@@ -41,151 +41,231 @@ Opmerkingen / hints:
     
     <!-- BEGIN Validaties t.b.v. Tijdelijke Alternatieve Maatregel c.q. Overgangsrecht Omgevingswet -->
     <iso:let name="identificatie" value="@gml:id"/>
-    <iso:pattern id="TAM">
+    <iso:pattern id="OwTAMuitgebreid">
         
         <iso:rule context="//imro:Bestemmingsplangebied[//imro:typePlan = 'bestemmingsplan']">
             
             <!-- Blokkeren BESTEMMINGSPLAN met status niet zijnde VASTGESTELD of GECONSOLIDEERD of naam begint niet met TAM-OMGEVINGSPLAN -->
-            <!-- Na 2022-07-01 is van object Bestemmingsplangebied met typePlan 'bestemmingsplan' de planstatus 'vastgesteld' of 'geconsolideerd' of de naam begint met 'TAM-omgevingsplan' -->
+            <!-- Na 2023-01-01 is van object Bestemmingsplangebied met typePlan 'bestemmingsplan' de planstatus 'vastgesteld' of 'geconsolideerd' of de naam begint met 'TAM-omgevingsplan ' -->
             <iso:assert
                 test="
-                (number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &gt;= 20220701 
-                and
-                ((imro:planstatusInfo/imro:PlanstatusEnDatum/imro:planstatus = 'vastgesteld' or imro:planstatusInfo/imro:PlanstatusEnDatum/imro:planstatus = 'geconsolideerd')
-                or
-                starts-with(imro:naam, 'TAM-omgevingsplan ')
+                (
+                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &gt;= 20230101 
+                    and
+                    (
+                        (
+                            imro:planstatusInfo/imro:PlanstatusEnDatum/imro:planstatus = 'vastgesteld' 
+                            or 
+                            imro:planstatusInfo/imro:PlanstatusEnDatum/imro:planstatus = 'geconsolideerd'
+                        )
+                        or
+                        starts-with(imro:naam, 'TAM-omgevingsplan ')
+                    )
                 )
-                )
                 or
-                (number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20220701)                    
-                "
-                > IMRO-object met gml:id <iso:value-of select="@gml:id"/>, type = <iso:value-of
-                    select="name()"/>: Fout in imro:planstatus -> Als imro:typePlan is
-                'bestemmingsplan' en imro:datum is groter dan of gelijk aan 2022-07-01, dan moet
-                imro:planstatus zijn 'vastgesteld' of 'geconsolideerd' of imro:naam moet beginnen
-                met 'TAM-omgevingsplan '. </iso:assert>
+                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20230101                    
+                "> 
+                IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
+                type = <iso:value-of select="name()"/>: 
+                Fout in planstatus -> Als typePlan is 'bestemmingsplan' en datum is groter dan of gelijk aan 2023-01-01, 
+                dan moet planstatus zijn 'vastgesteld' of 'geconsolideerd', tenzij naam begint met 'TAM-omgevingsplan '.
+            </iso:assert>
         </iso:rule>
         
-        <!-- Blokkeren INPASSINGSPLAN en UITWERKINGSPLAN en WIJZIGINGSPLAN met status ONTWERP-->
-        <!-- Na 2022-07-01 is van object Bestemmingsplangebied met typePlan 'inpassingsplan' of 'uitwerkingsplan' of 'wijzigingsplan' de planstatus niet 'ontwerp'-->
+        <!-- Blokkeren INPASSINGSPLAN als status ongelijk aan 'vastgesteld', tenzij TAM-INPASSINGSPLAN-->
+        <!-- Na 2023-01-01 begint object Bestemmingsplangebied met typePlan 'inpassingsplan' de naam met 'TAM-projectbesluit ' -->
         <iso:rule
-            context="//imro:Bestemmingsplangebied[//imro:typePlan = 'inpassingsplan' or //imro:typePlan = 'uitwerkingsplan' or //imro:typePlan = 'wijzigingsplan']">
+            context="//imro:Bestemmingsplangebied[//imro:typePlan = 'inpassingsplan']">
+            <iso:assert
+                test="                
+                (
+                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &gt;= 20230101 
+                    and 
+                    (
+                        imro:planstatusInfo/imro:PlanstatusEnDatum/imro:planstatus = 'vastgesteld' 
+                        or 
+                        starts-with(imro:naam, 'TAM-projectbesluit ')
+                    )
+                )
+                or
+                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20230101                    
+                ">
+                IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
+                type = <iso:value-of select="name()"/>: 
+                Fout in typePlan -> Als typePlan is 'inpassingsplan' en datum is groter dan of gelijk aan 2023-01-01, 
+                dan mag typePlan niet zijn 'inpassingsplan', tenzij naam begint met 'TAM-projectbesluit '.
+            </iso:assert>
+        </iso:rule>
+        
+        
+        <!-- Blokkeren UITWERKINGSPLAN en WIJZIGINGSPLAN met status ONTWERP-->
+        <!-- Na 2023-01-01 is van object Bestemmingsplangebied met typePlan 'uitwerkingsplan' of 'wijzigingsplan' de planstatus niet 'ontwerp'-->
+        <iso:rule
+            context="//imro:Bestemmingsplangebied[//imro:typePlan = 'uitwerkingsplan' or //imro:typePlan = 'wijzigingsplan']">
             <iso:assert
                 test="
-                (number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &gt;= 20220701 and (imro:planstatusInfo/imro:PlanstatusEnDatum/imro:planstatus != 'ontwerp'))
+                (
+                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &gt;= 20230101 
+                    and 
+                    imro:planstatusInfo/imro:PlanstatusEnDatum/imro:planstatus = 'vastgesteld'
+                )
                 or
-                (number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20220701)                    
-                "
-                > IMRO-object met gml:id <iso:value-of select="@gml:id"/>, type = <iso:value-of
-                    select="name()"/>: Fout in imro:planstatus -> Als imro:typePlan is
-                'inpassingsplan' of 'uitwerkingsplan' of 'wijzigingsplan' en imro:datum is groter
-                dan of gelijk aan 2022-07-01, dan mag imro:planstatus niet zijn 'ontwerp'.
+                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20230101                    
+                "> 
+                IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
+                type = <iso:value-of select="name()"/>: 
+                Fout in planstatus -> Als typePlan is 'uitwerkingsplan' of 'wijzigingsplan' en datum is groter dan of gelijk aan 2023-01-01, 
+                dan moet planstatus zijn 'vastgesteld'.
             </iso:assert>
         </iso:rule>
         
         <!-- Blokkeren AMVB en REGELING -->
-        <!-- Na 2022-07-01 mag voor objecttype Besluitgebied_A typePlan niet zijn 'amvb' of 'regeling'-->
-        <iso:rule context="//imro:Besluitgebied_A">
+        <!-- Na 2023-01-01 mag voor objecttype Besluitgebied_A typePlan niet zijn 'amvb' of 'regeling'-->
+        <iso:rule context="//imro:Besluitgebied_A[imro:typePlan = 'amvb' or imro:typePlan = 'regeling']">
             <iso:assert
                 test="
-                (number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &gt;= 20220701 and (imro:typePlan != 'amvb' and imro:typePlan != 'regeling'))
-                or
-                (number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20220701)
-                "
-                > IMRO-object met gml:id <iso:value-of select="@gml:id"/>, type = <iso:value-of
-                    select="name()"/>: Fout in typePlan -> Als imro:datum is groter dan of gelijk
-                aan 2022-07-01, dan mag typePlan niet zijn 'amvb' of 'regeling'. </iso:assert>
+                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20230101
+                "> 
+                IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
+                type = <iso:value-of select="name()"/>: 
+                Fout in typePlan -> Als typePlan is 'amvb' of 'regeling' en datum is groter dan of gelijk aan 2023-01-01, 
+                dan mag typePlan niet zijn 'amvb' of 'regeling'.
+            </iso:assert>
         </iso:rule>
         
-        <!-- Blokkeren PROVINCIALE VERORDENING-->
-        <!-- Na 2022-07-01 mag voor objecttype Besluitgebied_P typePlan niet zijn 'provinciale verordening'-->
-        <iso:rule context="//imro:Besluitgebied_P">
+        <!-- Blokkeren PROVINCIALE VERORDENING, tenzij TAM-PROVINCIALE VERORDENING-->
+        <!-- Na 2023-01-01 mag voor objecttype Besluitgebied_P typePlan niet zijn 'provinciale verordening'-->
+        <iso:rule context="//imro:Besluitgebied_P[//imro:typePlan = 'provinciale verordening']">
             <iso:assert
                 test="
-                (number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) >= 20220701 and imro:typePlan != 'provinciale verordening')
+                (
+                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) >= 20230101 
+                    and 
+                    starts-with(imro:naam, 'TAM-omgevingsverordening ')
+                )
                 or
-                (number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20220701)
-                "
-                > IMRO-object met gml:id <iso:value-of select="@gml:id"/>, type = <iso:value-of
-                    select="name()"/>: Fout in typePlan -> Als imro:datum is groter dan of gelijk
-                aan 2022-07-01, dan mag typePlan niet zijn 'provinciale verordening'. </iso:assert>
+                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20230101
+                "> 
+                IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
+                type = <iso:value-of select="name()"/>: 
+                Fout in typePlan -> Als typePlan is 'provinciale verordening' en datum is groter dan of gelijk aan 2023-01-01, 
+                dan mag typePlan niet zijn 'provinciale verordening', tenzij naam begint met 'TAM-omgevingsverordening '.
+            </iso:assert>
         </iso:rule>
         
-        <!-- Blokkeren AANWIJZINGSBESLUIT en BEHEERSVERORDENING en REACTIEVE AANWIJZING-->
-        <!-- Na 2022-07-01 mag voor objecttype Besluitgebied_X typePlan niet zijn 'beheersverordening' of 'reactieve aanwijzing'-->
+        
+        <!-- Blokkeren REACTIEVE AANWIJZING, tenzij TAM-REACTIEVE AANWIJZING-->
+        <!-- Na 2023-01-01 mag voor objecttype Besluitgebied_X typePlan niet zijn 'reactieve aanwijzing', tenzij naam begint met 'TAM-reactieve interventie  '-->
         <iso:rule
-            context="//imro:Besluitgebied_X[//imro:typePlan = 'beheersverordening' or //imro:typePlan = 'reactieve aanwijzing']">
+            context="//imro:Besluitgebied_X[//imro:typePlan = 'reactieve aanwijzing']">
             <iso:assert
                 test="
-                (number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &gt;= 20220701 and (imro:typePlan != 'beheersverordening' and imro:typePlan != 'reactieve aanwijzing'))
+                (
+                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &gt;= 20230101 
+                    and 
+                    starts-with(imro:naam, 'TAM-reactieve interventie ')
+                )
                 or
-                (number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20220701)
-                "
-                > IMRO-object met gml:id <iso:value-of select="@gml:id"/>, type = <iso:value-of
-                    select="name()"/>: Fout in typePlan -> Als imro:datum is groter dan of gelijk
-                aan 2022-07-01, dan mag typePlan niet zijn 'beheersverordening' of 'reactieve aanwijzing'. </iso:assert>
+                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20230101
+                "> 
+                IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
+                type = <iso:value-of select="name()"/>: 
+                Fout in typePlan -> Als typePlan is 'reactieve aanwijzing' en datum is groter dan of gelijk aan 2023-01-01,  
+                dan mag typePlan niet zijn 'reactieve aanwijzing', tenzij naam begint met 'TAM-reactieve interventie '.
+            </iso:assert>
         </iso:rule>
         
-        <!-- Blokkeren VOORBEREIDINGSBESLUIT niet zijnde TAM-Voorbereidingsbesluit-->
-        <!-- Na 2022-07-01 is voor objecttype Besluitgebied_X typePlan niet 'voorbereidingsbesluit' of naam begint met 'TAM-voorbereidingsbesluit'-->
+        <!-- Blokkeren BEHEERSVERORDENING-->
+        <!-- Na 2023-01-01 mag voor objecttype Besluitgebied_X typePlan niet zijn 'beheersverordening'-->
+        <iso:rule
+            context="//imro:Besluitgebied_X[//imro:typePlan = 'beheersverordening']">
+            <iso:assert
+                test="                
+                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20230101
+                "> 
+                IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
+                type = <iso:value-of select="name()"/>: 
+                Fout in typePlan -> Als typePlan is 'beheersverordening' en datum is groter dan of gelijk aan 2023-01-01, 
+                dan mag typePlan niet zijn 'beheersverordening'.
+            </iso:assert>
+        </iso:rule>
+        
+        <!-- Blokkeren VOORBEREIDINGSBESLUIT, tenzij TAM-Voorbereidingsbesluit-->
+        <!-- Na 2023-01-01 is voor objecttype Besluitgebied_X typePlan niet 'voorbereidingsbesluit' of naam begint met 'TAM-voorbereidingsbesluit'-->
         <iso:rule context="//imro:Besluitgebied_X[//imro:typePlan = 'voorbereidingsbesluit']">
             <iso:assert
                 test="
-                (number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &gt;= 20220701 and (imro:typePlan != 'voorbereidingsbesluit' or starts-with(imro:naam, 'TAM-voorbereidingsbesluit ')))
+                (
+                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &gt;= 20230101 
+                    and 
+                    starts-with(imro:naam, 'TAM-voorbereidingsbesluit ')
+                )
                 or
-                (number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20220701)
-                "
-                > IMRO-object met gml:id <iso:value-of select="@gml:id"/>, type = <iso:value-of
-                    select="name()"/>: Fout in typePlan -> Als imro:datum is groter dan of gelijk
-                aan 2022-07-01, dan mag typePlan niet zijn 'voorbereidingsbesluit' of imro:naam moet
-                beginnen met 'TAM-voorbereidingsbesluit '. </iso:assert>
+                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20230101
+                "> 
+                IMRO-object met gml:id <iso:value-of select="@gml:id"/>,
+                type = <iso:value-of select="name()"/>: 
+                Fout in typePlan -> Als typeplan is 'voorbereidingsbesluit' en datum is groter dan of gelijk aan 2023-01-01, 
+                dan mag typePlan niet zijn 'voorbereidingsbesluit', tenzij naam begint met 'TAM-voorbereidingsbesluit '.
+            </iso:assert>
         </iso:rule>
         
         
-        <!-- Blokkeren EXPLOITATIEPLAN met status ONTWERP -->
-        <!-- Na 2022-07-01 mag voor objecttype Besluitgebied_X met typePlan 'exploitatieplan' niet hebben status 'ontwerp'-->
+        <!-- Blokkeren EXPLOITATIEPLAN met status ONTWERP, CONCEPT, VOORONTWERP -->
+        <!-- Na 2023-01-01 mag voor objecttype Besluitgebied_X met typePlan 'exploitatieplan' niet hebben status 'ontwerp', 'concept' of 'voorontwerp'-->
         <iso:rule context="//imro:Besluitgebied_X[//imro:typePlan = 'exploitatieplan']">
             <iso:assert
                 test="
-                (number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &gt;= 20220701 and imro:typePlan = 'exploitatieplan' and imro:planstatusInfo/imro:PlanstatusEnDatum/imro:planstatus != 'ontwerp')
+                (
+                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &gt;= 20230101 
+                    and 
+                    (
+                        imro:planstatusInfo/imro:PlanstatusEnDatum/imro:planstatus != 'ontwerp' 
+                        and 
+                        imro:planstatusInfo/imro:PlanstatusEnDatum/imro:planstatus != 'concept' 
+                        and 
+                        imro:planstatusInfo/imro:PlanstatusEnDatum/imro:planstatus != 'voorontwerp'
+                    )
+                )
                 or
-                (number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20220701)
-                "
-                > IMRO-object met gml:id <iso:value-of select="@gml:id"/>, type = <iso:value-of
-                    select="name()"/>: Fout in typePlan -> Als imro:typePlan is 'exploitatieplan' en
-                imro:datum is groter dan of gelijk aan 2022-07-01, dan mag planstatus niet zijn
-                'ontwerp'. </iso:assert>
+                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20230101
+                ">
+                IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
+                type = <iso:value-of select="name()"/>: 
+                Fout in planstatus -> Als typePlan is 'exploitatieplan' en datum is groter dan of gelijk aan 2023-01-01, 
+                dan mag planstatus niet zijn 'ontwerp', 'concept' of 'voorontwerp'.
+            </iso:assert>
         </iso:rule>
         
         <!-- LET OP: IMRO2008 -->
         <!-- Blokkeren PROJECTBESLUIT en TIJDELIJK ONTHEFFING BUITENPLANS-->
-        <!-- Na 2022-07-01 mag voor objecttype Besluitgebied_X typePlan niet zijn 'projectbesluit' of 'tijdelijke ontheffing buitenplans'-->
-        <iso:rule context="//imro2008:Besluitgebied_X">
+        <!-- Na 2023-01-01 mag voor objecttype Besluitgebied_X typePlan niet zijn 'projectbesluit' of 'tijdelijke ontheffing buitenplans'-->
+        <iso:rule context="//imro2008:Besluitgebied_X[//imro2008:typePlan = 'projectbesluit' or //imro2008:typePlan = 'tijdelijke ontheffing buitenplans']">
             <iso:assert
-                test="
-                (number(translate(imro2008:planstatusInfo/imro2008:PlanstatusEnDatum_XGB/imro2008:datum, '-', '')) &gt;= 20220701 and (imro2008:typePlan != 'projectbesluit' and imro2008:typePlan != 'tijdelijke ontheffing buitenplans'))
-                or
-                (number(translate(imro2008:planstatusInfo/imro2008:PlanstatusEnDatum_XGB/imro2008:datum, '-', '')) &lt; 20220701)
-                "
-                > IMRO-object met gml:id <iso:value-of select="@gml:id"/>, type = <iso:value-of
-                    select="name()"/>: Fout in typePlan -> Als imro:datum is groter dan of gelijk
-                aan 2022-07-01, dan mag typePlan niet zijn 'projectbesluit' of 'tijdelijke
-                ontheffing buitenplans'. </iso:assert>
+                test="               
+                    number(translate(imro2008:planstatusInfo/imro2008:PlanstatusEnDatum_XGB/imro2008:datum, '-', '')) &lt; 20230101
+                "> 
+                IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
+                type = <iso:value-of select="name()"/>: 
+                Fout in typePlan -> Als typePlan is 'projectbesluit' of 'tijdelijke ontheffing buitenplans' en datum is groter dan of gelijk aan 2023-01-01, 
+                dan mag typePlan niet zijn 'projectbesluit' of 'tijdelijke ontheffing buitenplans'.
+            </iso:assert>
         </iso:rule>
         
-        <!-- Blokkeren STRUCTUURVISIE-->
-        <!-- Na 2022-07-01 mag voor objecttype Structuurvisieplangebied_G typePlan niet zijn 'structuurvisie'-->
-        <iso:rule context="//imro:Structuurvisieplangebied_G">
-            <iso:assert
-                test="
-                (number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) >= 20220701 and imro:typePlan != 'structuurvisie')
-                or
-                (number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20220701)
-                "
-                > IMRO-object met gml:id <iso:value-of select="@gml:id"/>, type = <iso:value-of
-                    select="name()"/>: Fout in typePlan -> Als imro:datum is groter dan of gelijk
-                aan 2022-07-01, dan mag typePlan niet zijn 'structuurvisie'. </iso:assert>
-        </iso:rule>
+        <!-- ONDERSTAANDE REGEL DOET NIET MEE: VOOR STRUCTUURVISIE GELDEN GEEN AANVULLENDE VALIDATIEREGELS -->
+         <!-- Blokkeren STRUCTUURVISIE-->
+         <!-- Na 2023-01-01 mag voor objecttype Structuurvisieplangebied_G typePlan niet zijn 'structuurvisie'-->
+         <!--<iso:rule context="//imro:Structuurvisieplangebied_G[imro:typePlan = 'structuurvisie']">
+             <iso:assert
+                 test="                
+                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20230101
+                 "> 
+                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
+                 type = <iso:value-of select="name()"/>: 
+                 Fout in typePlan -> Als typePlan is 'structuurvisie' en datum is groter dan of gelijk aan 2023-01-01, 
+                 dan mag typePlan niet zijn 'structuurvisie'. 
+                 </iso:assert>
+         </iso:rule>-->
         
     </iso:pattern>
     
