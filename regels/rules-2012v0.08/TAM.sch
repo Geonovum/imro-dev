@@ -36,7 +36,7 @@ Opmerkingen / hints:
     xmlns:func="http://exslt.org/functions" xml:lang="en">
     
     <iso:ns prefix="imro" uri="http://www.geonovum.nl/imro/2012/1.1"/>
-    <!--iso:ns prefix="imro2008" uri="http://www.geonovum.nl/imro/2008/1"/-->
+    <iso:ns prefix="imro2008" uri="http://www.geonovum.nl/imro/2008/1"/>
     <iso:ns prefix="gml" uri="http://www.opengis.net/gml/3.2"/>
     
     <!-- BEGIN Validaties t.b.v. Tijdelijke Alternatieve Maatregel c.q. Overgangsrecht Omgevingswet -->
@@ -236,12 +236,11 @@ Opmerkingen / hints:
                 dan mag planstatus niet zijn 'ontwerp', 'concept' of 'voorontwerp'.
             </iso:assert>
         </iso:rule>
-                
+        
         <!-- LET OP: IMRO2008 -->
-        <!-- 12-10-2022 VERPLAATST NAAR TAM-imro2008.sch en additional-validator-rules-2008v1.18_b-RC.sch -->        
         <!-- Blokkeren PROJECTBESLUIT en TIJDELIJK ONTHEFFING BUITENPLANS-->
         <!-- Na 2023-01-01 mag voor objecttype Besluitgebied_X typePlan niet zijn 'projectbesluit' of 'tijdelijke ontheffing buitenplans'-->
-        <!--iso:rule context="//imro2008:Besluitgebied_X[//imro2008:typePlan = 'projectbesluit' or //imro2008:typePlan = 'tijdelijke ontheffing buitenplans']">
+        <iso:rule context="//imro2008:Besluitgebied_X[//imro2008:typePlan = 'projectbesluit' or //imro2008:typePlan = 'tijdelijke ontheffing buitenplans']">
             <iso:assert
                 test="               
                     number(translate(imro2008:planstatusInfo/imro2008:PlanstatusEnDatum_XGB/imro2008:datum, '-', '')) &lt; 20230101
@@ -251,7 +250,7 @@ Opmerkingen / hints:
                 Fout in typePlan -> Als typePlan is 'projectbesluit' of 'tijdelijke ontheffing buitenplans' en datum is groter dan of gelijk aan 2023-01-01, 
                 dan mag typePlan niet zijn 'projectbesluit' of 'tijdelijke ontheffing buitenplans'.
             </iso:assert>
-        </iso:rule-->
+        </iso:rule>
         
         <!-- ONDERSTAANDE REGEL DOET NIET MEE: VOOR STRUCTUURVISIE GELDEN GEEN AANVULLENDE VALIDATIEREGELS -->
          <!-- Blokkeren STRUCTUURVISIE-->
