@@ -84,7 +84,7 @@ Opmerkingen / hints:
 	<!-- Onderstaande ingreep (regexp) is nodig omdat XSLT-1 geen reguliere expressies ondersteunt. Hiervoor is
 	een hulpfunctie gecreeerd. Indien een stylesheet processor wordt gebruikt die wel XSLT-2 
 	compliant is, dan kan de prefix "regexp:" verwijderd worden uit deze schematronfile. -->
-	<iso:ns prefix="regexp" uri="nl.vrom.roo.util.Regexp"/>
+	<iso:ns prefix="regexp" uri="nl.overheid.roo.util.Regexp"/>
 	
 	<iso:ns prefix="gml" uri="http://www.opengis.net/gml"/>
 	<iso:ns prefix="nen3610" uri="http://www.ravi.nl/nen3610"/>
