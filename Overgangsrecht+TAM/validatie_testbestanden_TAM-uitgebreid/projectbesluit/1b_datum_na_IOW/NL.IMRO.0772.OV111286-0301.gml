@@ -52,7 +52,7 @@
       <imro:planstatusInfo>
         <imro:PlanstatusEnDatum_XGB>
           <imro:planstatus>vastgesteld</imro:planstatus>
-          <imro:datum>2023-01-01</imro:datum>
+          <imro:datum>2023-07-01</imro:datum>
         </imro:PlanstatusEnDatum_XGB>
       </imro:planstatusInfo>
       <imro:besluitnummer>1171009</imro:besluitnummer>

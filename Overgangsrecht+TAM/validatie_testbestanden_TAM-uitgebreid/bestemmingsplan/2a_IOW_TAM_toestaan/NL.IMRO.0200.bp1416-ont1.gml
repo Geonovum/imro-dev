@@ -626,7 +626,7 @@
          <imro:planstatusInfo>
             <imro:PlanstatusEnDatum>
                <imro:planstatus>ontwerp</imro:planstatus>
-               <imro:datum>2023-01-01</imro:datum>
+               <imro:datum>2023-07-01</imro:datum>
             </imro:PlanstatusEnDatum>
          </imro:planstatusInfo>
          <imro:verwijzingNaarTekstInfo>
