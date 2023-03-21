@@ -135,7 +135,7 @@
          <imro:planstatusInfo>
             <imro:PlanstatusEnDatum>
                <imro:planstatus>vastgesteld</imro:planstatus>
-               <imro:datum>2023-07-01</imro:datum>
+               <imro:datum>2024-01-01</imro:datum>
             </imro:PlanstatusEnDatum>
          </imro:planstatusInfo>
          <imro:besluitnummer>Z121415-2020</imro:besluitnummer>
