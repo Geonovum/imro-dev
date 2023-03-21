@@ -63,6 +63,7 @@
  * 04-06-2013   MO  Added validation for 'geldende imro norm voor plan' RO standaarden 2012 per 1-7-2013
  * 12-10-2022	AdB IMRO2008 TAM-uitgebreid validaties scenario B opgenomen (zie einde document)
  * 28-10-2022	GRK Datum inwerkingtreding Ow aangepast n.a.v. uitstel: 01-01-2023 ==> 01-07-2023 
+ * 21-03-2023	AdB Datum inwerkingtreding Ow aangepast na instemming : 01-07-2023 ==> 01-01-2024 
  ******************************************************************************/
 
 Opmerkingen / hints:
@@ -1010,15 +1011,15 @@ Geometrie waarnaar verwezen wordt bevat: Surfaces: <iso:value-of select="$begren
 	<iso:pattern id="OwTAMuitgebreid">       
 		
 		<!-- Blokkeren PROJECTBESLUIT en TIJDELIJK ONTHEFFING BUITENPLANS-->
-		<!-- Na 2023-07-01 mag voor objecttype Besluitgebied_X typePlan niet zijn 'projectbesluit' of 'tijdelijke ontheffing buitenplans'-->
+		<!-- Na 2024-01-01 mag voor objecttype Besluitgebied_X typePlan niet zijn 'projectbesluit' of 'tijdelijke ontheffing buitenplans'-->
 		<iso:rule context="//imro:Besluitgebied_X[//imro:typePlan = 'projectbesluit' or //imro:typePlan = 'tijdelijke ontheffing buitenplans']">
 			<iso:assert
 				test="               
-				number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum_XGB/imro:datum, '-', '')) &lt; 20230701
+				number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum_XGB/imro:datum, '-', '')) &lt; 20240101
 				"> 
 				IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
 				type = <iso:value-of select="name()"/>: 
-				Fout in typePlan -> Als typePlan is 'projectbesluit' of 'tijdelijke ontheffing buitenplans' en datum is groter dan of gelijk aan 2023-07-01, 
+				Fout in typePlan -> Als typePlan is 'projectbesluit' of 'tijdelijke ontheffing buitenplans' en datum is groter dan of gelijk aan 2024-01-01, 
 				dan mag typePlan niet zijn 'projectbesluit' of 'tijdelijke ontheffing buitenplans'.
 			</iso:assert>
 		</iso:rule>        
