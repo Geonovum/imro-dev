@@ -1,6 +1,6 @@
-# Logische regel Validatie Wro instrumenten overgangsrecht inclusief tijdelijke alternatieve maatregelen
+# Logische regels validatie Wro instrumenten overgangsrecht inclusief tijdelijke alternatieve maatregelen
 versie  08-06-2023
-Ten opzichte van de vorige versie (20 maart 2023 met scenario A en B) is in deze versie van het document scenario B leidend en daarmee het enige scenario omdat de tijdelijke alternatievemaateregelen (TAM's) onderdeel zijn van het overgangsrecht voor gemeenten, provincies en het Rijk ten behoeve van inwerkingtreden Omgevingswet. 
+Ten opzichte van de vorige versie (20 maart 2023 met scenario A en B) is in deze versie van het document scenario B leidend en daarmee het enige scenario omdat de tijdelijke alternatieve maateregelen (TAM's) onderdeel zijn van het overgangsrecht voor gemeenten, provincies en het Rijk ten behoeve van inwerkingtreden Omgevingswet. 
 
 ## Uitgangspunten
 Validatieregels overgangsrecht inclusief TAM's zijn aanvullend op de huidige validaties van IMRO, STRI etc., versies 2012, 2008 etc. om herlaad acties in Ruimtelijkeplannen.nl voor te blijven ondersteunen na inwerkingtreden van de Omgevingswet.
