@@ -3,7 +3,7 @@ versie  08-06-2023
 Ten opzichte van de vorige versie (20 maart 2023 met scenario A en B) is in deze versie van het document scenario B leidend en daarmee het enige scenario omdat de tijdelijke alternatieve maateregelen (TAM's) onderdeel zijn van het overgangsrecht voor gemeenten, provincies en het Rijk ten behoeve van inwerkingtreden Omgevingswet. 
 
 ## Uitgangspunten
-Validatieregels overgangsrecht inclusief TAM's zijn aanvullend op de huidige validaties van IMRO, STRI etc., versies 2012, 2008 etc. om herlaad acties in Ruimtelijkeplannen.nl voor te blijven ondersteunen na inwerkingtreden van de Omgevingswet.
+Validatieregels overgangsrecht inclusief TAM's zijn aanvullend op de huidige validaties van IMRO, STRI etc., versies 2012, 2008 etc. om herlaad acties in Ruimtelijkeplannen.nl voor te blijven ondersteunen na inwerkingtreden (iwt) van de Omgevingswet.
 
 ## Overgangrecht Wro, inclusief TAM's, ten behoeve van inwerkingtreden Omgevingswet 
 Alle Wro instrumenten op alfabetische volgorde, inclusief het gebruik van TAM's.  
@@ -65,7 +65,7 @@ Dit is het Wro instrument voluit ministeriele regeling; in IMRO2012 geduid als r
 - nieuwe upload blokkeren per 1-1-2024.
 
 ### structuurvisie
-Dit plantype vervalt per itw Omgevingswet; onder de Omgevingswet is dit het instrument omgevingsvisie. 
+Dit plantype vervalt per iwt Omgevingswet; onder de Omgevingswet is dit het instrument omgevingsvisie. 
 - (vooralsnog) geen aanpassing validatieregels.
 
 ### tijdelijke ontheffing buitenplans
