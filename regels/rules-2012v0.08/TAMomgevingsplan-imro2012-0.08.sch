@@ -42,7 +42,7 @@ Opmerkingen / hints:
 
     <!-- BEGIN Validaties t.b.v. Tijdelijke Alternatieve Maatregel c.q. Overgangsrecht Omgevingswet -->
     <iso:let name="identificatie" value="@gml:id"/>
-    <iso:pattern id="OwTAMuitgebreid">
+     <iso:pattern id="TAMomgevingsplan">
 
         <iso:rule context="//imro:Bestemmingsplangebied[//imro:typePlan = 'bestemmingsplan']">
 
