@@ -1,6 +1,10 @@
 # Logische regels validatie Wro instrumenten overgangsrecht inclusief tijdelijke alternatieve maatregelen
-versie  08-06-2023
-Ten opzichte van de vorige versie (20 maart 2023 met scenario A en B) is in deze versie van het document scenario B leidend en daarmee het enige scenario omdat de tijdelijke alternatieve maateregelen (TAM's) onderdeel zijn van het overgangsrecht voor gemeenten, provincies en het Rijk ten behoeve van inwerkingtreden Omgevingswet. 
+Versie 20-11-2023
+
+Ten opzichte van de vorige versie (8 juni 2023) zijn er logische regels toegevoegd:
+- upload van structuurvisies per 1-1-2024 blokkeren;
+- upload van plancontour en pdf plannen (PCP plannen) per 1-1-2024 blokkeren;
+- upload van beheersverordening per 1-1-2024 toelaten in het geval de plannaam = 'Chw bestemmingsplan [spatie][plannaam]' en planstatus= 'vastgesteld' of 'geconsolideerd'. 
 
 ## Uitgangspunten
 Validatieregels overgangsrecht inclusief TAM's zijn aanvullend op de huidige validaties van IMRO, STRI etc., versies 2012, 2008 etc. om herlaad acties in Ruimtelijkeplannen.nl voor te blijven ondersteunen na inwerkingtreden (iwt) van de Omgevingswet.
@@ -17,7 +21,9 @@ Dit plantype wordt ook door TAM gebruikt voor het Omgevingswet instrument instru
 - nieuwe upload blokkeren per 1-1-2024.
 
 ### beheersverordening
-- nieuwe upload blokkeren per 1-1-2024.
+- nieuwe upload blokkeren per 1-1-2024;
+- tenzij vanaf 1-1-2024 plannaam= 'Chw bestemmingsplan [spatie][plannaam]' dan behandelen als plantype bestemmingsplan, namelijk:
+vanaf 1-1-2024 doorlaten als planstatus= 'vastgesteld' of 'geconsolideerd', anders upload blokkeren.
 
 ### bestemmingsplan
 Onderdeel van overgangsrecht: afmaken bestemmingsplan procedure na iwt Omgevingswet.
@@ -65,8 +71,8 @@ Dit is het Wro instrument voluit ministeriele regeling; in IMRO2012 geduid als r
 - nieuwe upload blokkeren per 1-1-2024.
 
 ### structuurvisie
-Dit plantype vervalt per iwt Omgevingswet; onder de Omgevingswet is dit het instrument omgevingsvisie. 
-- (vooralsnog) geen aanpassing validatieregels.
+Dit plantype vervalt per iwt Omgevingswet; onder de Omgevingswet is dit het instrument omgevingsvisie. Er is geen overgangsrecht van toepassing.  
+- nieuwe upload blokkeren per 1-1-2024 van gemeenten (_G), provincies (_P) en het Rijk (_R). 
 
 ### tijdelijke ontheffing buitenplans
 Dit is een voormalig Wro instrument; met iwt Wabo omgevingsvergunning geworden. Dus tijdelijk ontheffing buitenplans wel in IMRO2008, niet IMRO2012. In IMRO2012 daarvoor in de plaats de omgevingsvergunning. 
@@ -84,3 +90,8 @@ Dit plantype wordt door TAM gebruikt voor het Omgevingswet instrument voorbereid
 ### wijzigingsplan
 Onderdeel van overgangsrecht: afmaken bestemmingsplan procedure na iwt Omgevingswet.
 - vanaf 1-1-2024 doorlaten als planstatus= 'vastgesteld', anders upload blokkeren.
+
+### plancontour en pdf
+De facultatieve standaard Plancontour en PDF is voor het beschikbaar stellen van oude ruimtelijke plannen, visies en besluiten die tussen 1 juli 2008 en 1 januari 2010 overeenkomstig de Wro analoog in procedure zijn geweest, alsook voor bestemmingsplannen van de oude WRO (voor 1 juli 2008) digitaal beschikbaar te stellen. 
+Er is geen overgangsrecht van toepassing. 
+- nieuwe upload blokkeren per 1-1-2024.
