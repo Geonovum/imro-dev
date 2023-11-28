@@ -154,7 +154,6 @@ Opmerkingen / hints:
             </iso:assert>
         </iso:rule>
         
-        
         <!-- Blokkeren REACTIEVE AANWIJZING, tenzij TAM-REACTIEVE AANWIJZING-->
         <!-- Na 2024-01-01 mag voor objecttype Besluitgebied_X typePlan niet zijn 'reactieve aanwijzing', tenzij naam begint met 'TAM-reactieve interventie  '-->
         <iso:rule
@@ -181,13 +180,24 @@ Opmerkingen / hints:
         <iso:rule
             context="//imro:Besluitgebied_X[//imro:typePlan = 'beheersverordening']">
             <iso:assert
-                test="                
-                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20240101
+                test="(
+                       number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &gt;= 20240101
+                        and 
+                        starts-with(imro:naam, 'Chw bestemmingsplan ')
+                        and
+                        (
+                            imro:planstatusInfo/imro:PlanstatusEnDatum/imro:planstatus = 'vastgesteld'
+                            or                            
+                            imro:planstatusInfo/imro:PlanstatusEnDatum/imro:planstatus = 'geconsolideerd'
+                            )
+                        )
+                    or                    
+                        number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20240101
                 "> 
                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
                 type = <iso:value-of select="name()"/>: 
                 Fout in typePlan -> Als typePlan is 'beheersverordening' en datum is groter dan of gelijk aan 2024-01-01, 
-                dan mag typePlan niet zijn 'beheersverordening'.
+                dan mag typePlan niet zijn 'beheersverordening', tenzij naam begint met 'Chw bestemmingsplan ' en status is gelijk aan 'vastgesteld' of 'geconsolideerd'.
             </iso:assert>
         </iso:rule>
         
@@ -238,6 +248,21 @@ Opmerkingen / hints:
             </iso:assert>
         </iso:rule>
         
+        <!-- Blokkeren STRUCTUURVISIE-->
+         <!-- Na 2024-01-01 mag voor objecttype Structuurvisieplangebied_G typePlan niet zijn 'structuurvisie'-->
+         <iso:rule context="//imro:Structuurvisieplangebied_G[imro:typePlan = 'structuurvisie']">
+             <iso:assert
+                 test="                
+                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20240101
+                 "> 
+                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
+                 type = <iso:value-of select="name()"/>: 
+                 Fout in typePlan -> Als typePlan is 'structuurvisie' en datum is groter dan of gelijk aan 2024-01-01, 
+                 dan mag typePlan niet zijn 'structuurvisie'. 
+                 </iso:assert>
+         </iso:rule>
+        
+        
         <!-- LET OP: IMRO2008 -->
         <!-- Blokkeren PROJECTBESLUIT en TIJDELIJK ONTHEFFING BUITENPLANS-->
         <!-- Na 2024-01-01 mag voor objecttype Besluitgebied_X typePlan niet zijn 'projectbesluit' of 'tijdelijke ontheffing buitenplans'-->
@@ -253,20 +278,8 @@ Opmerkingen / hints:
             </iso:assert>
         </iso:rule>-->
         
-        <!-- ONDERSTAANDE REGEL DOET NIET MEE: VOOR STRUCTUURVISIE GELDEN GEEN AANVULLENDE VALIDATIEREGELS -->
-         <!-- Blokkeren STRUCTUURVISIE-->
-         <!-- Na 2024-01-01 mag voor objecttype Structuurvisieplangebied_G typePlan niet zijn 'structuurvisie'-->
-         <!--<iso:rule context="//imro:Structuurvisieplangebied_G[imro:typePlan = 'structuurvisie']">
-             <iso:assert
-                 test="                
-                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20240101
-                 "> 
-                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
-                 type = <iso:value-of select="name()"/>: 
-                 Fout in typePlan -> Als typePlan is 'structuurvisie' en datum is groter dan of gelijk aan 2024-01-01, 
-                 dan mag typePlan niet zijn 'structuurvisie'. 
-                 </iso:assert>
-         </iso:rule>-->
+       
+       
         
     </iso:pattern>
     
