@@ -33,6 +33,7 @@
  * 12-10-2022	AdB IMRO2008 TAM-validaties verplaatst naar imro-dev/regels/rules-2008v1.18/additional-validator-rules-2008v1.18-b-RC.sch
  * 28-10-2022	GRK Datum inwerkingtreding Ow aangepast n.a.v. uitstel: 01-01-2023 ==> 01-07-2023
  * 21-03-2023	AdB Datum inwerkingtreding Ow aangepast na instemming : 01-07-2023 ==> 01-01-2024 
+ * 28-11-2023   AdB Blokkeren structuurvisie + beheersoverordening, tenzij naam  'Chw bestemmingsplan ' én status 'vastgesteld' of 'geconsolideerd'
  ******************************************************************************/
 
 Opmerkingen / hints:
@@ -907,13 +908,24 @@ Geometrie waarnaar verwezen wordt bevat: Surfaces: <iso:value-of select="$begren
 		<iso:rule
 			context="//imro:Besluitgebied_X[//imro:typePlan = 'beheersverordening']">
 			<iso:assert
-				test="                
+				test="(
+				number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &gt;= 20240101
+				and 
+				starts-with(imro:naam, 'Chw bestemmingsplan ')
+				and
+				(
+				imro:planstatusInfo/imro:PlanstatusEnDatum/imro:planstatus = 'vastgesteld'
+				or                            
+				imro:planstatusInfo/imro:PlanstatusEnDatum/imro:planstatus = 'geconsolideerd'
+				)
+				)
+				or                    
 				number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20240101
 				"> 
 				IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
 				type = <iso:value-of select="name()"/>: 
 				Fout in typePlan -> Als typePlan is 'beheersverordening' en datum is groter dan of gelijk aan 2024-01-01, 
-				dan mag typePlan niet zijn 'beheersverordening'.
+				dan mag typePlan niet zijn 'beheersverordening', tenzij naam begint met 'Chw bestemmingsplan ' en status is gelijk aan 'vastgesteld' of 'geconsolideerd'.
 			</iso:assert>
 		</iso:rule>
 		
@@ -962,6 +974,20 @@ Geometrie waarnaar verwezen wordt bevat: Surfaces: <iso:value-of select="$begren
 				Fout in planstatus -> Als typePlan is 'exploitatieplan' en datum is groter dan of gelijk aan 2024-01-01, 
 				dan mag planstatus niet zijn 'ontwerp', 'concept' of 'voorontwerp'.
 			</iso:assert>
+		</iso:rule>	
+		
+		<!-- Blokkeren STRUCTUURVISIE-->
+		<!-- Na 2024-01-01 mag voor objecttype Structuurvisieplangebied_G typePlan niet zijn 'structuurvisie'-->
+		<iso:rule context="//imro:Structuurvisieplangebied_G[imro:typePlan = 'structuurvisie']">
+			<iso:assert
+				test="                
+				number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20240101
+				"> 
+				IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
+				type = <iso:value-of select="name()"/>: 
+				Fout in typePlan -> Als typePlan is 'structuurvisie' en datum is groter dan of gelijk aan 2024-01-01, 
+				dan mag typePlan niet zijn 'structuurvisie'. 
+			</iso:assert>
 		</iso:rule>
 		
 		<!-- LET OP: IMRO2008 -->
@@ -980,20 +1006,7 @@ Geometrie waarnaar verwezen wordt bevat: Surfaces: <iso:value-of select="$begren
 			</iso:assert>
 		</iso:rule>-->
 		
-		<!-- ONDERSTAANDE REGEL DOET NIET MEE: VOOR STRUCTUURVISIE GELDEN GEEN AANVULLENDE VALIDATIEREGELS -->
-		<!-- Blokkeren STRUCTUURVISIE-->
-		<!-- Na 2024-01-01 mag voor objecttype Structuurvisieplangebied_G typePlan niet zijn 'structuurvisie'-->
-		<!--<iso:rule context="//imro:Structuurvisieplangebied_G[imro:typePlan = 'structuurvisie']">
-             <iso:assert
-                 test="                
-                    number(translate(imro:planstatusInfo/imro:PlanstatusEnDatum/imro:datum, '-', '')) &lt; 20240101
-                 "> 
-                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
-                 type = <iso:value-of select="name()"/>: 
-                 Fout in typePlan -> Als typePlan is 'structuurvisie' en datum is groter dan of gelijk aan 2024-01-01, 
-                 dan mag typePlan niet zijn 'structuurvisie'. 
-                 </iso:assert>
-         </iso:rule>-->
+		
 		
 	</iso:pattern>
 		
