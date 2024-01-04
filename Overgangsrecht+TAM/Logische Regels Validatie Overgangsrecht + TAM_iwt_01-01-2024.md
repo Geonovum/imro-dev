@@ -1,10 +1,10 @@
 # Logische regels validatie Wro instrumenten overgangsrecht inclusief tijdelijke alternatieve maatregelen
-Versie 20-11-2023
+Versie 4-1-2024
 
-Ten opzichte van de vorige versie (8 juni 2023) zijn er logische regels toegevoegd:
-- upload van structuurvisies per 1-1-2024 blokkeren;
-- upload van plancontour en pdf plannen (PCP plannen) per 1-1-2024 blokkeren;
-- upload van beheersverordening per 1-1-2024 toelaten in het geval de plannaam = 'Chw bestemmingsplan [spatie][plannaam]' en planstatus= 'vastgesteld' of 'geconsolideerd'. 
+Ten opzichte van de vorige versie (20 november 2023) zijn logische regels gewijzigd voor type structuurvisie per bevoegd gezag:
+- blokkeren voor provincie en het Rijk;
+- toelaten na 1 januari voor gemeente als planstatus= vastgesteld, anders blokkeren.
+
 
 ## Uitgangspunten
 Validatieregels overgangsrecht inclusief TAM's zijn aanvullend op de huidige validaties van IMRO, STRI etc., versies 2012, 2008 etc. om herlaad acties in Ruimtelijkeplannen.nl voor te blijven ondersteunen na inwerkingtreden (iwt) van de Omgevingswet.
