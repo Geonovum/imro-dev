@@ -71,8 +71,9 @@ Dit is het Wro instrument voluit ministeriele regeling; in IMRO2012 geduid als r
 - nieuwe upload blokkeren per 1-1-2024.
 
 ### structuurvisie
-Dit plantype vervalt per iwt Omgevingswet; onder de Omgevingswet is dit het instrument omgevingsvisie. Er is geen overgangsrecht van toepassing.  
-- nieuwe upload blokkeren per 1-1-2024 van gemeenten (_G), provincies (_P) en het Rijk (_R). 
+Dit plantype vervalt per iwt Omgevingswet; onder de Omgevingswet is dit het instrument omgevingsvisie. Er is geen overgangsrecht van toepassing voor provincies en het Rijk. Er is wel overgangsrecht voor de gemeentelijke structuurvisies: lopende Wro procedures afmaken na iwt Omgevingswet.   
+- nieuwe upload blokkeren per 1-1-2024 plantype structuurvisie van provincies (_P) en het Rijk (_R);
+- vanaf 1-1-2024 plantype structuurvisie van gemeente (_G) doorlaten als planstatus= 'vastgesteld', anders upload blokkeren.
 
 ### tijdelijke ontheffing buitenplans
 Dit is een voormalig Wro instrument; met iwt Wabo omgevingsvergunning geworden. Dus tijdelijk ontheffing buitenplans wel in IMRO2008, niet IMRO2012. In IMRO2012 daarvoor in de plaats de omgevingsvergunning. 
