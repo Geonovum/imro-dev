@@ -27,7 +27,8 @@
  * 16-04-2018   TB  Thijs Brentjens. Additional check. For plantype + overheid
  * 30-10-2018	GD	Geodan/Kadaster. various corrections on 'Additional check. For plantype + overheid' implemented RPnl v.2.4.2.3 dd.29-10-2018.
  * 21-03-2023	AdB Datum inwerkingtreding Ow aangepast na instemming : 01-07-2023 ==> 01-01-2024 
- ******************************************************************************/
+ * 28-11-2023   AdB Blokkeren structuurvisie + beheersoverordening, tenzij naam  'Chw bestemmingsplan ' én status 'vastgesteld' of 'geconsolideerd'
+  ******************************************************************************/
 
 Opmerkingen / hints:
 
