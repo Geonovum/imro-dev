@@ -35,6 +35,7 @@
  * 21-03-2023	AdB Datum inwerkingtreding Ow aangepast na instemming : 01-07-2023 ==> 01-01-2024 
  * 28-11-2023   AdB Blokkeren structuurvisie + beheersoverordening, tenzij naam  'Chw bestemmingsplan ' én status 'vastgesteld' of 'geconsolideerd'
  * 04-01-2024	AdB Aanpassen validatieregel structuurvisie gemeente, en toevoegen validatieregel structuurvisie rijk en provincie inzake overgangsrecht
+ * 26-02-2024   AdB Toestaan gemeentelijke structuurvisie met status 'ontwerp' na 2024-01-01 
  ******************************************************************************/
 
 Opmerkingen / hints:
