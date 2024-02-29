@@ -998,7 +998,7 @@ Geometrie waarnaar verwezen wordt bevat: Surfaces: <iso:value-of select="$begren
 				IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
 				type = <iso:value-of select="name()"/>: 
 				Fout in typePlan -> Als typePlan is 'structuurvisie' en datum is groter dan of gelijk aan 2024-01-01, 
-				dan mag typePlan niet zijn 'structuurvisie', tenzij planstatus is gelijk aan vastgesteld. 
+				dan mag typePlan niet zijn 'structuurvisie', tenzij planstatus is gelijk aan ontwerp of vastgesteld. 
 			</iso:assert>
 		</iso:rule>
 		
