@@ -42,7 +42,7 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0" xmlns:imro="http://www.geonovum.nl/imro/2012/1.1" targetNamespace="http://www.geonovum.nl/imro/2012/1.1" elementFormDefault="qualified" version="1.1.0">
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
 	<import namespace="http://www.opengis.net/gmlsf/2.0" schemaLocation="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd"/>
-	<include schemaLocation="functieaanduidingen.xsd"/>
+	<include schemaLocation="../20140826-IMRO2012-Functielijst/functieaanduidingen.xsd"/>
 	<include schemaLocation="matrixsymboolcode.xsd"/>
 	<!--XML Schema document created by ShapeChange-->
 	<annotation>
