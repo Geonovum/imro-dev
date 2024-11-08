@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="22.1">
+    <meta>
+        <filters directoryPatterns="" filePatterns="" positiveFilePatterns="" showHiddenFiles="false"/>
+        <options>
+            <serialized version="22.1" xml:space="preserve">
+                <serializableOrderedMap>
+                    <entry>
+                        <String>catalogs.v5</String>
+                        <String-array>
+                            <String>file:/C:/Users/w.quak.GNM/Git/wilkoquak/schemas.opengis.net/schemas.opengis.net-catalog.xml</String>
+                            <String>file:/C:/Users/w.quak.GNM/Git/Geonovum/imro-dev/XML%20Schema/imro2012-v1.3-catalog.xml</String>
+                        </String-array>
+                    </entry>
+                    <entry>
+                        <String>key.xml.catalog.option.pane</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                    <entry>
+                        <String>resolve.schema.locations.also.through.system.mappings</String>
+                        <Boolean>false</Boolean>
+                    </entry>
+                    <entry>
+                        <String>validation.scenario.associations</String>
+                        <scenarioAssociation-array>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Overgangsrecht+TAM/validatie_testbestanden_TAM-uitgebreid/bestemmingsplan/1e_IOW_weigeren_planstatus_concept/NL.IMRO.1930.BPRaadhuislaanSP-1001.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TAM IMRO validatie</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Overgangsrecht+TAM/validatie_testbestanden_TAM-uitgebreid/bestemmingsplan/2a_IOW_TAM_toestaan/NL.IMRO.0200.bp1416-ont1.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TAM IMRO validatie</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Overgangsrecht+TAM/validatie_testbestanden_TAM-uitgebreid/bestemmingsplan/1d_IOW_weigeren_planstatus_voorontwerp/NL.IMRO.1930.BPRaadhuislaanSP-1001.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TAM IMRO validatie</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Overgangsrecht+TAM/validatie_testbestanden_TAM-uitgebreid/beheersverordening/1a_datum%20voor_IOW/NL.IMRO.0106.99BHV2020180B-C001.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TAM IMRO validatie</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>regels/rules-2012v0.09/additional-validator-rules-2012v0.09-b-RC.sch</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TAM IMRO validatie</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>regels/rules-2012v0.12-werkversie/TAM-imro2012-v0.11.sch</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TAM IMRO validatie</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                        </scenarioAssociation-array>
+                    </entry>
+                    <entry>
+                        <String>validation.scenarios</String>
+                        <validationScenario-array>
+                            <validationScenario>
+                                <field name="pairs">
+                                    <list>
+                                        <validationUnit>
+                                            <field name="validationType">
+                                                <validationUnitType>
+                                                    <field name="validationInputType">
+                                                        <String>text/xml</String>
+                                                    </field>
+                                                </validationUnitType>
+                                            </field>
+                                            <field name="url">
+                                                <String>${currentFileURL}</String>
+                                            </field>
+                                            <field name="validationEngine">
+                                                <validationEngine>
+                                                    <field name="engineType">
+                                                        <String>&lt;Default engine></String>
+                                                    </field>
+                                                    <field name="allowsAutomaticValidation">
+                                                        <Boolean>true</Boolean>
+                                                    </field>
+                                                </validationEngine>
+                                            </field>
+                                            <field name="allowAutomaticValidation">
+                                                <Boolean>true</Boolean>
+                                            </field>
+                                            <field name="extensions">
+                                                <null/>
+                                            </field>
+                                            <field name="validationSchema">
+                                                <validationUnitSchema>
+                                                    <field name="dtdSchemaPublicID">
+                                                        <null/>
+                                                    </field>
+                                                    <field name="schematronPhase">
+                                                        <null/>
+                                                    </field>
+                                                    <field name="type">
+                                                        <Integer>7</Integer>
+                                                    </field>
+                                                    <field name="uri">
+                                                        <String>${pdu}/regels/rules-2012v0.12-werkversie/TAM-imro2012-v0.12.sch</String>
+                                                    </field>
+                                                </validationUnitSchema>
+                                            </field>
+                                        </validationUnit>
+                                    </list>
+                                </field>
+                                <field name="type">
+                                    <String>Validation_scenario</String>
+                                </field>
+                                <field name="name">
+                                    <String>TAM IMRO validatie</String>
+                                </field>
+                            </validationScenario>
+                        </validationScenario-array>
+                    </entry>
+                </serializableOrderedMap>
+            </serialized>
+        </options>
+    </meta>
+    <projectTree name="irmo-dev.xpr">
+        <folder path="."/>
+    </projectTree>
+</project>

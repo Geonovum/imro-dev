@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.1//EN" "http://www.oasis-open.org/committees/entity/release/1.1/catalog.dtd">
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+  <group id="imop">
+    <uri name="http://www.geonovum.nl/imro/2012/1.1" uri="2012-v1.3/20120209-IMRO2012-Schema-Lokaal/IMRO2012.xsd" />
+  </group>
+
+      <!--
+        The first entry in each pair uses the "uri" version, and
+        the second the "system" version of the redirect.  The two alternatives
+        are provided in order to support various processing environments, which
+        appear to behave slightly differently.
+        https://www.seegrid.csiro.au/twiki/bin/view/AppSchemas/ConfiguringXMLProcessors
+    -->
+    <!-- map the official reference to a local reference -->
+
+    <rewriteURI
+        uriStartString="http://schemas.geonovum.nl/imro/2012/1.1"
+        rewritePrefix="2012-v1.3/20120209-IMRO2012-Schema-Lokaal"/>
+</catalog>
