@@ -46,8 +46,8 @@ Opmerkingen / hints:
     <!-- BEGIN Validaties t.b.v. Tijdelijke Alternatieve Maatregel c.q. Overgangsrecht Omgevingswet -->
     <iso:let name="identificatie" value="@gml:id"/>
     <iso:pattern id="OwTAMuitgebreid">
-        <!-- RW1: Wilko heeft deze regel toegevoegd maar nog niet getest -->
-        <iso:rule context="//imro:Bestemmingsplangebied[//imro:typePlan = 'aanwijzingsbesluit']">
+        <!-- RW-2025-1: Deze regel test op regelwijziging RW-2025-1 zoals beschreven in README.md -->
+        <iso:rule context="//imro:Besluitgebied_X[//imro:typePlan = 'aanwijzingsbesluit']">
 
             <!-- plantype aanwijzingsbesluit, attribuut beleidsmatigVerantwoordelijkeOverheid = nationale overheid nieuwe upload van het rijk blokkeren per 1-1-2025  -->
              <iso:assert
