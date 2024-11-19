@@ -627,7 +627,7 @@
          <imro:planstatusInfo>
             <imro:PlanstatusEnDatum>
                <imro:planstatus>vastgesteld</imro:planstatus>
-               <imro:datum>2024-02-02</imro:datum>
+               <imro:datum>2025-02-02</imro:datum>
             </imro:PlanstatusEnDatum>
          </imro:planstatusInfo>
          <imro:verwijzingNaarTekstInfo>

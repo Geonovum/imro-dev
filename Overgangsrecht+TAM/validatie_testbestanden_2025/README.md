@@ -27,26 +27,58 @@ beleidsmatigVerantwoordelijkeOverheid --> 'nationale overheid'
 
 ```shell
 cp ../validatie_testbestanden_TAMomgevingsplan/bestemmingsplan/010_fout_TAM-omgevingsplan_geconsolideerd.gml RW-2025-2a.gml
+PlanstatusEnDatum --> '2025-02-02'
+planstatus --> ontwerp
 ```
 
 ## RW-2025-2b
 
 ```shell
 cp ../validatie_testbestanden_TAMomgevingsplan/bestemmingsplan/010_fout_TAM-omgevingsplan_geconsolideerd.gml RW-2025-2b.gml
+PlanstatusEnDatum --> '2025-02-02'
+planstatus --> vastgesteld
 ```
+
 ## RW-2025-3  
+
+```shell
+cp ../validatie_testbestanden_TAM-uitgebreid/inpassingsplan/1e_datum_na_IOW_ontwerp_TAMuitgebreid/NL.IMRO.0000.EZKip18GaswTern-2001.gml RW-2025-3.gml
+```
 
 ## RW-2025-4a
 
+```shell
+cp ../validatie_testbestanden_TAM-uitgebreid/structuurvisie/gemeente/1b_datum_na_IOW_vastgesteld/NL.IMRO.0119.ZoDoenWeGroen-SVC1.gml RW-2025-4a.gml
+```
+
 ## RW-2025-4b
+
+```shell
+cp ../validatie_testbestanden_TAM-uitgebreid/structuurvisie/gemeente/1e_datum_na_IOW_ontwerp/NL.IMRO.0119.ZoDoenWeGroen-SVC1.gml  RW-2025-4b.gml
+```
 
 ## RW-2025-5  
 
+```shell
+ cp ../validatie_testbestanden_TAM-uitgebreid/voorbereidingsbesluit/2a_IOW_TAM_toestaan/NL.IMRO.0202.VBB985-0301.gml RW-2025-5.gml
+```
+
 ## RW-2025-6  
+
+```shell
+cp ../validatie_testbestanden_TAM-uitgebreid/voorbereidingsbesluit/2a_IOW_TAM_toestaan/NL.IMRO.0202.VBB985-0301.gml RW-2025-6.gml
+```
+## RW-2025-7a
+
+```shell
+cp ../validatie_testbestanden_TAM-uitgebreid/voorbereidingsbesluit/2a_IOW_TAM_toestaan/NL.IMRO.0202.VBB985-0301.gml RW-2025-7a.gml
+```
 
 ## RW-2025-7b
 
-
+```shell
+cp ../validatie_testbestanden_TAM-uitgebreid/voorbereidingsbesluit/2a_IOW_TAM_toestaan/NL.IMRO.0202.VBB985-0301.gml RW-2025-7b.gml
+```
 
 
 
