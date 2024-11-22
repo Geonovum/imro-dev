@@ -1,16 +1,14 @@
 # Logische regels validatie Wro instrumenten overgangsrecht inclusief tijdelijke alternatieve maatregelen
 
-Versie 1-10-2024
+Versie 2024-11-20
 
-## overzicht
+Ten opzichte van de vorige versie (4 januari 2024) zijn logische regels gewijzigd voor 
 
-Ten opzichte van de vorige versie (4 januari 2024) zijn logische regels gewijzigd voor:
-
-- aanwijzingsbesluit: per 1-1-2025 blokkeren voor Rijk;
-- Bestemmingsplan: logische regel voor gebruik van TAM voorafgaand aan IWT verwijderen;
-- Inpassingsplan: per 1-1-2025 voor Rijk ontwerpplannen blokkeren;
-- Structuurvisie: per 1-1-2025 voor gemeente ontwerpplannen blokkeren;
-- Voorbereidingsbesluit: Per 1-1-2025 geen nieuwe upload meer voor provincie en Rijk;
+- **aanwijzingsbesluit**: per 1-1-2025 blokkeren voor Rijk;
+- **Bestemmingsplan**: logische regel voor gebruik van TAM voorafgaand aan IWT verwijderen;
+- **Inpassingsplan**: per 1-1-2025 voor Rijk ontwerpplannen blokkeren;
+- **Structuurvisie**: per 1-1-2025 voor gemeente ontwerpplannen blokkeren;
+- **Voorbereidingsbesluit**: Per 1-1-2025 geen nieuwe upload meer voor provincie en Rijk;
 
 ## Uitgangspunten
 
@@ -27,21 +25,20 @@ Alle Wro instrumenten op alfabetische volgorde, inclusief het gebruik van TAM's.
 
 Onderdeel van het overgangsrecht: afmaken bestemmingsplan procedure na inwerkingtreden 
 Omgevingswet. Dit plantype wordt ook door TAM gebruikt voor het Omgevingswet
-instrument instructie. Validatieregels worden niet aangepast in verband met
+instrument instructie. Validatieregels worden niet aangepast in verband met 
 overgangsrecht bestemmingsplan procedure, daarom geen verder aanpassing van de
 validatieregels voor aanwijzingsbesluit per 1-1-2024.
 
-- **RW-2025-1**: plantype aanwijzingsbesluit, attribuut beleidsmatigVerantwoordelijkeOverheid = nationale overheid nieuwe upload van het rijk blokkeren per 1-1-2025
+- plantype aanwijzingsbesluit, attribuut beleidsmatigVerantwoordelijkeOverheid = nationale overheid nieuwe upload van het rijk blokkeren per 1-1-2025 (RW-2025-1)
 
-```rulespeak
-ALS
-    we kijken in Besluitgebied_X met typePlan = aanwijzingsbesluit
-DAN MOET GELDEN
-    of PlanstatusEnDatum voor PlanStatusEnDatum is voor ‘2025-01-01’ EN
-    de beleidsmatigVerantwoordelijkeOverheid = nationale overheid
-ALS DAT NIET ZO IS DAN
-    Geef de melding: “Fout: een aanwijzingsbesluit van het Rijk mag na 1 januari 2025 niet worden gepubliceerd”
-```
+In de context van een plan met typePlan = ‘aanwijzingsbesluit’
+
+Check of 1 van de volgende regels geldt:
+
+- Datum < ‘2025-01-01’
+- Datum > ‘2025-01-01’ EN  beleidsmatigVerantwoordelijkeOverheid = nationale overheid
+
+Anders geef foutmelding.
 
 ### amvb
 
@@ -67,30 +64,27 @@ Ruimtelijkeplannen.nl.
 - vanaf 1-1-2024 doorlaten als planstatus= 'vastgesteld' of 'geconsolideerd',
     anders upload blokkeren;
 - tenzij vanaf 1-1-2024 plannaam= 'TAM-omgevingsplan[spatie][plannaam]';
-- **RW-2025-2** Deze regel verwijderen: tot 1-1-2024 met plannaam= 'TAM-omgevingsplan[spatie][plannaam]' alleen
+- tot 1-1-2024 met plannaam= 'TAM-omgevingsplan[spatie][plannaam]' alleen
     doorlaten met een van de volgende statusssen: concept, voorontwerp, ontwerp,
-    anders upload blokkeren. => deze regel moet dus uit de schematron worden gehaald. (RW-2)
+    anders upload blokkeren. => deze regel moet dus uit de schematron worden gehaald. (RW-2025-2)
 
-WQ: Van de drie beperkingen vervalt de laatste die ervoor zorgde dat alleen bestemmingsplannen met de plannaam TAM* met de status concept,voorontwerp en ontwerp geupload konden worden voor 1-1-2024  --> Met TAM-omgevingsplan mag ALLES 
+Ik heb moeite met deze regels: er staat niet wat er met plannen van voor 2024-01-01 moet gebeuren. Ik laat ze allemaal door
 
-```
-ALS 
-   we kijken naar een bestemmingsplan
-DAN MOET GELDEN
-   Het plantype een bestemmingsplan is EN
-   PlanStatusEnDatum is na ‘2024-01-01’ EN
-   De planstatus is anders dan 'vastgesteld' of 'geconsolideerd' EN
-   De plannaam is niet 'TAM-omgevingsplan[spatie][plannaam]';
-DAN
-   Geef melding “Vanaf 1 januari 2024 mag een bestemmingsplan alleen de planstatus ‘vastgesteld’ of ‘geconsolideerd’ hebben.”
-```
+In de context van een plan met typePlan = ‘aanwijzingsbesluit’
+
+Check of 1 van de volgende regels geldt:
+
+- Datum \< ‘2024-01-01’
+- Datum \>= ‘2024-01-01’ EN planstatus zit in (vastegsteld, geconsolideerd) en plannaam is niet 'TAM-omgevingsplan[spatie][plannaam]'
+- Datum \>= ‘2024-01-01’ EN plannam='TAM-omgevingsplan[spatie][plannaam]'
+
+Anders geef foutmelding:
 
 ### exploitatieplan
 
 Onderdeel van overgangsrecht: afmaken bestemmingsplan procedure na inwerkingtreden 
 Omgevingswet.
-
-- vanaf 1-1-2024 doorlaten als planstatus= 'vastgesteld' of 'geconsolideerd',
+-   vanaf 1-1-2024 doorlaten als planstatus= 'vastgesteld' of 'geconsolideerd',
     anders upload blokkeren.
 
 ### gerechtelijke uitspraak
@@ -102,39 +96,35 @@ instrumenten zelf, maar worden door de bronhouder van het instrument beschikbaar
 gesteld naast het instrument. De Raad van State en de rechtbanken zijn zelf geen
 bronhouder. Onderdeel van overgangsrecht: afmaken bestemmingsplan procedure na
 inwerkingtreden  Omgevingswet
-
-- geen aanpassing validatieregels.
+-   geen aanpassing validatieregels.
 
 ### inpassingsplan
 
 Wro inpassingsplan is een bestemmingsplan dat alleen door het Rijk en provincie
-kan worden gepubliceerd tot inwerkingtreden Omgevingswet. De procedure moet worden kunnen
+kan worden gepubliceerd tot inwerkingtreden  Omgevingswet. De procedure moet worden kunnen
 afgemaakt onder Wro na inwerkingtreding. Dit plantype wordt door TAM gebruikt
 voor het Omgevingswet instrument projectbesluit.
-
 - planstatus 'ontwerp' blokkeren per 1-1-2024
 - per 1-1-2024 doorlaten als planstatus= 'vastgesteld', anders blokkeren';
 - tenzij vanaf 1-1-2024 plannaam= 'TAM-projectbesluit[spatie][plannaam]';
-- **RW-2025-3** voor Rijk als plannaam='TAM-projectbesluit[spatie][plannaam]' en planstatus ‘ontwerp’ blokkeren per 1-1-2025.
+- voor Rijk als plannaam='TAM-projectbesluit[spatie][plannaam]' en planstatus ‘ontwerp’ blokkeren per 1-1-2025. (RW-2025-3)
 
-```
-Wilko wil regel toevoegen:
-ALS 
-   Het plantype een inpassingsplan is EN
-   d
-   PlanStatusEnDatum is na ‘2025-01-01’ EN
-   De planstatus is ‘ontwerp’ EN
-   plannaam='TAM-projectbesluit[spatie][plannaam]'
-DAN
-   Geef melding “Vanaf 1 januari 2025 mag met rijk geen ontwerp inpassingsplannen meer publiceren”; 
-```
+In de context van inpassingsplan
+Check of aan 1 van de volgende eisen is voldaan
+- Datum < ‘2024-01-01’
+- Datum >= ‘2024-01-01’ en plannaam niet ‘TAM-projectbesluit ’ en planstatus = ‘vastgesteld’
+- Datum tussen >= ‘2024-01-01' en 2025-01-01  en plannaam= 'TAM-projectbesluit  
+- Datum > ‘2025-01-01’ en plannaam= 'TAM-projectbesluit  en verantwoordelijke is niet rijk
+- Datum > ‘2025-01-01’ en plannaam= 'TAM-projectbesluit  en verantwoordelijke is rijk en planstatus <> ontwerp.
+
+Anders geef foutmelding:
 
 ### omgevingsvergunning
 
 Wabo instrument. Opvolger in Ow: omgevingsvergunning voor een buitenplanse
 omgevingsplanactiviteit (BOPA).
 
-- geen aanpassing validatieregels.
+-   geen aanpassing validatieregels.
 
 ### projectbesluit
 
@@ -146,16 +136,13 @@ Dit is een voormalig Wro instrument voor gemeenten, provincies en het Rijk; met 
 
 Dit plantype wordt door TAM gebruikt voor het Omgevingswet instrument
 omgevingsverordening.
-
 - nieuwe upload blokkeren per 1-1-2024;
-- tenzij vanaf 1-1-2024 plannaam=
-    'TAM-omgevingsverordening[spatie][plannaam]'.
+- tenzij vanaf 1-1-2024 plannaam= 'TAM-omgevingsverordening[spatie][plannaam]'.
 
 ### reactieve aanwijzing
 
 Dit plantype wordt door TAM gebruikt voor het Omgevingswet instrument reactieve
 interventie.
-
 - nieuwe upload blokkeren per 1-1-2024;
 - tenzij vanaf 1-1-2024 plannaam= 'TAM-reactieve interventie[spatie][plannaam]'.
 
@@ -164,7 +151,7 @@ interventie.
 Dit is het Wro instrument voluit ministeriele regeling; in IMRO2012 geduid als
 regeling.
 
-- nieuwe upload blokkeren per 1-1-2024.
+-   nieuwe upload blokkeren per 1-1-2024.
 
 ### structuurvisie
 
@@ -177,19 +164,18 @@ structuurvisies: lopende Wro procedures afmaken na inwerkingtreden Omgevingswet.
     (_P) en het Rijk (_R);
 - vanaf 1-1-2024 plantype structuurvisie van gemeente (_G) doorlaten als
     planstatus= 'vastgesteld' of planstatus =’ontwerp’, anders upload blokkeren.
-- **RW-2025-4** Vanaf 1-1-2025 plantype structuurvisie van gemeente (_G) doorlaten als
-    planstatus= 'vastgesteld', anders upload blokkeren.
+- vanaf 1-1-2025 plantype structuurvisie van gemeente (_G) doorlaten als
+    planstatus= 'vastgesteld', anders upload blokkeren. (RW-2025-4)
 
-```
-Wilko wil een nieuwe regel toevoegen:
-ALS 
-   Het plantype een structuurvisie is EN
-   de beleidsmatigVerantwoordelijkeOverheid = gemeente EN
-   PlanStatusEnDatum is na ‘2025-01-01’ EN
-   De planstatus is niet ‘vastgesteld‘
-DAN
-   Geef melding “Vanaf 1 januari 2025 mag een gemeente alleen vastgestelde omgevingsvisie volgens het plantype structuurvisie publiceren als voor 1 januari 2025 de procedure is aangevangen”; 
-```
+In de context van imro:Structuurvisieplangebied_G[imro:typePlan = 'structuurvisie'
+Controleer of aan 1 van de volgende eisen is voldaan:
+
+- Datum < ‘2024-01-01’
+- Datum tussen ‘2024-01-01’ en ‘2025-01-01’ en planstatus in (vastgesteld, ontwerp)
+- Datum na ‘2025-01-01) en planstatus = vastgesteld.
+
+Anders geef foutmelding
+
 
 ### tijdelijke ontheffing buitenplans
 
@@ -203,7 +189,6 @@ daarvoor in de plaats de omgevingsvergunning.
 
 Onderdeel van overgangsrecht: afmaken bestemmingsplan procedure na iwt
 Omgevingswet.
-
 - vanaf 1-1-2024 doorlaten als planstatus= 'vastgesteld', anders upload
     blokkeren.
 
@@ -214,35 +199,25 @@ voorbereidingsbesluit.
 
 - nieuwe upload blokkeren per 1-1-2024;
 - tenzij vanaf 1-1-2024 plannaam= 'TAM-voorbereidingsbesluit[spatie][plannaam]'.
-- **RW-2025-5** nieuwe upload blokkeren per 1-1-2025 plantype voorbereidingsbesluit van provincies (_X)
-- **RW-2025-6** nieuwe upload blokkeren per 1-1-2025 plantype voorbereidingsbesluit van het Rijk (_X)
-- **RW-2025-7** Als plannaam= 'TAM-voorbereidingsbesluit[spatie][plannaam]' van gemeente
-    (_G) doorlaten als planstatus= 'vastgesteld', anders upload blokkeren
+- nieuwe upload blokkeren per 1-1-2025 plantype voorbereidingsbesluit van provincies
+    (_P) (RW-5) en het Rijk (_R). (RW-6)
+- Als plannaam= 'TAM-voorbereidingsbesluit[spatie][plannaam]' van gemeente
+    (_G) doorlaten als planstatus= 'vastgesteld', anders upload blokkeren (RW-7)
 
-```
-Dit moet met een assertie worden gecontroleerd
-Regel 3:
-ALS
-   plantype = voorbereidingsbesluit EN
-   de beleidsmatigVerantwoordelijkeOverheid = provincie EN
-   PlanStatusEnDatum < ‘2025-01-01’ EN)
-DAN is het goed
-ANDERS:
-   Geef melding “Vanaf 1 januari 2025 mogen het Rijk en de provincies Omgevingswet voorbereidingsbesluiten op basis van TAM meer publiceren”; 
+In de context van imro:Besluitgebied_X[//imro:typePlan = 'voorbereidingsbesluit'
+Controleer of aan 1 van de volgende eisen is voldaan
 
-ALS 
-   Het plantype een voorbereidingsbesluit is EN
-   de plannaam = 'TAM-voorbereidingsbesluit[spatie][plannaam]' EN
-   de beleidsmatigVerantwoordelijkeOverheid = gemeente EN
-   planstatus is iets anders dan ‘vastgesteld’ 
-DAN
-   Geef melding “Vanaf 1 januari 2024 mag de gemeente alleen vastgestelde Omgevingswet voorbereidingsbesluiten op basis van TAM publiceren”; 
-```
+- Datum < ‘2024-01-01’
+- Datum tussen 2024-01-01 en 2025-01-01 en plannaam= 'TAM-voorbereidingsbesluit’
+- Datum na 2025-01-01 en en verantwoordelijke = gemeente en planstatus = 'vastgesteld'
+
+Anders geef foutmelding.
 
 ### wijzigingsplan
 
 Onderdeel van overgangsrecht: afmaken bestemmingsplan procedure na iwt
 Omgevingswet.
+
 - vanaf 1-1-2024 doorlaten als planstatus= 'vastgesteld', anders upload blokkeren.
 
 ### plancontour en pdf
