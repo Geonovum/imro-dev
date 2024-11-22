@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../regels/rules-2012v0.12-werkversie/TAM-imro2012-v0.12.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../../regels/rules-2012v0.12/TAM-imro2012-v0.12.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <!-- 
     Testbestand voor testsituatie metL
     - Plandatum = 2025-02-02
