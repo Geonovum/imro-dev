@@ -68,8 +68,6 @@ Ruimtelijkeplannen.nl.
     doorlaten met een van de volgende statusssen: concept, voorontwerp, ontwerp,
     anders upload blokkeren. => deze regel moet dus uit de schematron worden gehaald. (RW-2025-2)
 
-Ik heb moeite met deze regels: er staat niet wat er met plannen van voor 2024-01-01 moet gebeuren. Ik laat ze allemaal door
-
 In de context van een plan met typePlan = ‘aanwijzingsbesluit’
 
 Check of 1 van de volgende regels geldt:
