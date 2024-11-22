@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../regels/rules-2012v0.12-werkversie/TAM-imro2012-v0.12.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <imro:FeatureCollectionIMRO gml:id="Collectie" xmlns:imro="http://www.geonovum.nl/imro/2012/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geonovum.nl/imro/2012/1.1 http://schemas.geonovum.nl/imro/2012/1.1/IMRO2012.xsd">
 	<gml:description>RoPlan IMRO GML import/export. Converteert IMRO GML data naar RoPlan bestanden en vice versa</gml:description>
 	<!--Bestand aangemaakt m.b.v. Crotec's RoPlan IMRO Export versie 3.0.1 (voor v8i)-->
@@ -19,8 +20,8 @@
 			<imro:naam>TAM-voorbereidingsbesluit Bronbeeklaan 66</imro:naam>
 			<imro:planstatusInfo>
 				<imro:PlanstatusEnDatum>
-					<imro:planstatus>vastgesteld</imro:planstatus>
-					<imro:datum>2024-01-01</imro:datum>
+					<imro:planstatus>ontwerp</imro:planstatus>
+					<imro:datum>2025-02-02</imro:datum>
 				</imro:PlanstatusEnDatum>
 			</imro:planstatusInfo>
 			<imro:besluitnummer>535216</imro:besluitnummer>

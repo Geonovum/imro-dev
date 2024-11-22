@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Aangemaakt door emondsl op maandag 18 oktober 2021, 16:23:42-->
 <!--Kopie van validatie_testbestanden_TAMomgevingsplan/bestemmingsplan/010_fout_TAM-omgevingsplan_geconsolideerd.gml -->
+<?xml-model href="../../regels/rules-2012v0.12-werkversie/TAM-imro2012-v0.12.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <imro:FeatureCollectionIMRO gml:id="NL.IMRO.FEATURECOLLECTION" xmlns:imro="http://www.geonovum.nl/imro/2012/1.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.geonovum.nl/imro/2012/1.1 http://schemas.geonovum.nl/imro/2012/1.1/IMRO2012.xsd">
    <imro:featureMember>
       <imro:MetadataIMRObestand gml:id="NL.IMRO.METADATA">
@@ -622,7 +623,7 @@
          <imro:beleidsmatigVerantwoordelijkeOverheid>gemeentelijke overheid</imro:beleidsmatigVerantwoordelijkeOverheid>
          <imro:naamOverheid>gemeente Apeldoorn</imro:naamOverheid>
          <imro:overheidsCode>0200</imro:overheidsCode>
-         <imro:naam>TAM-omgevingsplan Winkelcentrum Kerschoten</imro:naam>
+         <imro:naam>Omgevingsplan Winkelcentrum Kerschoten</imro:naam>
          <imro:locatieNaam>Mecatorplein Kerschoten</imro:locatieNaam>
          <imro:planstatusInfo>
             <imro:PlanstatusEnDatum>

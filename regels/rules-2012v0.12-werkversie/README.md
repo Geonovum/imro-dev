@@ -33,14 +33,13 @@ validatieregels voor aanwijzingsbesluit per 1-1-2024.
 
 - **RW-2025-1**: plantype aanwijzingsbesluit, attribuut beleidsmatigVerantwoordelijkeOverheid = nationale overheid nieuwe upload van het rijk blokkeren per 1-1-2025
 
-Wilko wil dit implementeren door de volgende regel toe te voegen. Er is nog helemaal geen regel over het aanwijsbesluit. Die ga ik dus maken.
-
-```
-ALS 
-   het plantype een aanwijsbesluit is EN 
-    PlanStatusEnDatum is na ‘2025-01-01’EN
-    de beleidsmatigVerantwoordelijkeOverheid = nationale overheid 
-DAN
+```rulespeak
+ALS
+    we kijken in Besluitgebied_X met typePlan = aanwijzingsbesluit
+DAN MOET GELDEN
+    of PlanstatusEnDatum voor PlanStatusEnDatum is voor ‘2025-01-01’ EN
+    de beleidsmatigVerantwoordelijkeOverheid = nationale overheid
+ALS DAT NIET ZO IS DAN
     Geef de melding: “Fout: een aanwijzingsbesluit van het Rijk mag na 1 januari 2025 niet worden gepubliceerd”
 ```
 
@@ -76,6 +75,8 @@ WQ: Van de drie beperkingen vervalt de laatste die ervoor zorgde dat alleen best
 
 ```
 ALS 
+   we kijken naar een bestemmingsplan
+DAN MOET GELDEN
    Het plantype een bestemmingsplan is EN
    PlanStatusEnDatum is na ‘2024-01-01’ EN
    De planstatus is anders dan 'vastgesteld' of 'geconsolideerd' EN
@@ -107,7 +108,7 @@ inwerkingtreden  Omgevingswet
 ### inpassingsplan
 
 Wro inpassingsplan is een bestemmingsplan dat alleen door het Rijk en provincie
-kan worden gepubliceerd tot inwerkingtreden  Omgevingswet. De procedure moet worden kunnen
+kan worden gepubliceerd tot inwerkingtreden Omgevingswet. De procedure moet worden kunnen
 afgemaakt onder Wro na inwerkingtreding. Dit plantype wordt door TAM gebruikt
 voor het Omgevingswet instrument projectbesluit.
 
@@ -120,7 +121,7 @@ voor het Omgevingswet instrument projectbesluit.
 Wilko wil regel toevoegen:
 ALS 
    Het plantype een inpassingsplan is EN
-   de beleidsmatigVerantwoordelijkeOverheid = nationale overheid EN
+   d
    PlanStatusEnDatum is na ‘2025-01-01’ EN
    De planstatus is ‘ontwerp’ EN
    plannaam='TAM-projectbesluit[spatie][plannaam]'
@@ -213,8 +214,8 @@ voorbereidingsbesluit.
 
 - nieuwe upload blokkeren per 1-1-2024;
 - tenzij vanaf 1-1-2024 plannaam= 'TAM-voorbereidingsbesluit[spatie][plannaam]'.
-- **RW-2025-5** nieuwe upload blokkeren per 1-1-2025 plantype voorbereidingsbesluit van provincies (_P)
-- **RW-2025-6** nieuwe upload blokkeren per 1-1-2025 plantype voorbereidingsbesluit van het Rijk (_R)
+- **RW-2025-5** nieuwe upload blokkeren per 1-1-2025 plantype voorbereidingsbesluit van provincies (_X)
+- **RW-2025-6** nieuwe upload blokkeren per 1-1-2025 plantype voorbereidingsbesluit van het Rijk (_X)
 - **RW-2025-7** Als plannaam= 'TAM-voorbereidingsbesluit[spatie][plannaam]' van gemeente
     (_G) doorlaten als planstatus= 'vastgesteld', anders upload blokkeren
 

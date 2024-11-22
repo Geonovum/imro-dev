@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Aangemaakt door ester op dinsdag 15 juni 2021, 10:22:34-->
+<?xml-model href="../../regels/rules-2012v0.12-werkversie/TAM-imro2012-v0.12.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <imro:FeatureCollectionIMRO gml:id="Collectie" xmlns:imro="http://www.geonovum.nl/imro/2012/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geonovum.nl/imro/2012/1.1 http://schemas.geonovum.nl/imro/2012/1.1/IMRO2012.xsd">
    <imro:featureMember>
       <imro:MetadataIMRObestand gml:id="NL.IMRO.METADATA">
@@ -32,7 +33,7 @@
          <imro:planstatusInfo>
             <imro:PlanstatusEnDatum>
                <imro:planstatus>ontwerp</imro:planstatus>
-               <imro:datum>2024-01-01</imro:datum>
+               <imro:datum>2025-02-02</imro:datum>
             </imro:PlanstatusEnDatum>
          </imro:planstatusInfo>
          <imro:verwijzingNaarTekstInfo>
