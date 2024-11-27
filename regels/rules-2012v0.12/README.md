@@ -227,3 +227,75 @@ voor bestemmingsplannen van de oude WRO (voor 1 juli 2008) digitaal beschikbaar
 te stellen. Er is geen overgangsrecht van toepassing.
 
 - nieuwe upload blokkeren per 1-1-2024.
+
+## Regelanalyse
+
+In de regels wordt maar een beperkt aantal kenmerken van een aangeleverd document gebruikt. Om te weten of de regels volledig zijn moet voor alle mogelijke waarden van deze kenmerken vastgelegd zijn of die toegestaan zijn. Een inventarisatie:
+
+### Context
+
+De context gaat over welke type plannen er zijn.
+
+| Context                                                                                               |
+| ----------------------------------------------------------------------------------------------------- |
+| imro:Besluitgebied_X[//imro:typePlan = 'aanwijzingsbesluit']                                          |
+| imro:Bestemmingsplangebied[//imro:typePlan = 'bestemmingsplan']                                       |
+| imro:Bestemmingsplangebied[//imro:typePlan = 'inpassingsplan']                                        |
+| imro:Bestemmingsplangebied[//imro:typePlan = 'uitwerkingsplan' or //imro:typePlan = 'wijzigingsplan'] |
+| imro:Besluitgebied_A[imro:typePlan = 'amvb' or imro:typePlan = 'regeling']                            |
+| imro:Besluitgebied_P[//imro:typePlan = 'provinciale verordening']                                     |
+| imro:Besluitgebied_X[//imro:typePlan = 'reactieve aanwijzing']                                        |
+| imro:Besluitgebied_X[//imro:typePlan = 'beheersverordening']                                          |
+| imro:Besluitgebied_X[//imro:typePlan = 'voorbereidingsbesluit']                                       |
+| imro:Besluitgebied_X[//imro:typePlan = 'exploitatieplan']                                             |
+| imro:Structuurvisieplangebied_G[imro:typePlan = 'structuurvisie']                                     |
+| imro:Structuurvisieplangebied_P[imro:typePlan = 'structuurvisie']                                     |
+| imro:Structuurvisieplangebied_R[imro:typePlan = 'structuurvisie']                                     |
+
+### Plandatum
+
+De plandatum is een veld in het plan. Het is dus niet de datum waarop het plan is aangeleverd. Er kunnen plannen met een datum in het verleden worden ingediend. Hoewel ieder datum valide is zijn er in de regels in principe drie ranges. Voor veel regels zijn de laatste twee ranges samengepakt.   
+
+
+| Plandatum                      |
+| ------------------------------ |
+| \< 2024-01-01                  |
+| >= 2024-01-01 en \< 2025-01-01 |
+| >= 2025-01-01                  |
+
+### Planstatus
+
+Dit is een enumeratie uit het schema. Veel regels gelden voor een subset van de genoemde statussen.
+
+| Planstatus     |
+| -------------- |
+| concept        |
+| voorontwerp    |
+| ontwerp        |
+| vastgesteld    |
+| geconsolideerd |
+
+### Type overheid
+
+Nog nooit een regel over 'deelgemeente/stadsdeel' gezien. Ik wist eigenlijk niet dat die bestond en heb wel eens 'ongelijk aan nationale overheid' gezet als ik bedoelde 'provinciale- of gemeentelijk overheid'.
+
+
+| Type Overheid          |
+| ---------------------- |
+| gemeentelijke overheid |
+| deelgemeente/stadsdeel |
+| provinciale overheid   |
+| nationale overheid     |
+
+### Plannaam
+
+In specifieke contexten heeft een plannaam een betekenis. De regels zijn anders voor als de plannaam begint met de gegeven tekst. Dit is het setje waar ik me in de regels nog het meest zorgen om maak. 
+
+| Plannaam                  | Context                                                           |
+| ------------------------- | ----------------------------------------------------------------- |
+| TAM-omgevingsplan         | imro:Bestemmingsplangebied[//imro:typePlan = 'bestemmingsplan']   |
+| TAM-projectbesluit        | imro:Bestemmingsplangebied[//imro:typePlan = 'inpassingsplan']    |
+| TAM-omgevingsverordening  | imro:Besluitgebied_P[//imro:typePlan = 'provinciale verordening'] |
+| TAM-reactieve interventie | imro:Besluitgebied_X[//imro:typePlan = 'reactieve aanwijzing']    |
+| Chw bestemmingsplan       | imro:Besluitgebied_X[//imro:typePlan = 'beheersverordening']"   |
+| TAM-voorbereidingsbesluit | imro:Besluitgebied_X[//imro:typePlan = 'voorbereidingsbesluit']   |
