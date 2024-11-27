@@ -66,7 +66,7 @@
                 ">
                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>,
                 type = <iso:value-of select="name()"/>:
-                Een aanwijzingsbesluit van het Rijk met de datum 1 januari 2025 of later mag niet worden gepubliceerd.
+                Fout: een aanwijzingsbesluit van het Rijk met de datum 1 januari 2025 of later mag niet worden gepubliceerd.
             </iso:assert>
         </iso:rule>
         
@@ -100,8 +100,8 @@
                 "> 
                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
                 type = <iso:value-of select="name()"/>: 
-                Fout in planstatus -> Als typePlan is 'bestemmingsplan' en datum is groter dan of gelijk aan 2024-01-01, 
-                dan moet planstatus zijn 'vastgesteld' of 'geconsolideerd', tenzij naam begint met 'TAM-omgevingsplan '.
+                Fout: als typePlan is 'bestemmingsplan' en datum is groter dan of gelijk aan 2024-01-01, 
+                dan moet planstatus zijn 'vastgesteld' of 'geconsolideerd', tenzij naam begint met 'TAM-omgevingsplan[spatie]'.
             </iso:assert>
         </iso:rule>
         
@@ -145,7 +145,7 @@
                 ">
                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
                 type = <iso:value-of select="name()"/>: 
-                Een inpassingsplan van het Rijk met de status ontwerp met de datum 1 januari 2025 of later mag niet worden gepubliceerd. 
+                Fout: een inpassingsplan van het Rijk met de status ontwerp met de datum 1 januari 2025 of later mag niet worden gepubliceerd. 
             </iso:assert>
         </iso:rule>
         
@@ -166,7 +166,7 @@
                 "> 
                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
                 type = <iso:value-of select="name()"/>: 
-                Fout in planstatus -> Als typePlan is 'uitwerkingsplan' of 'wijzigingsplan' en datum is groter dan of gelijk aan 2024-01-01, 
+                Fout: als typePlan is 'uitwerkingsplan' of 'wijzigingsplan' en datum is groter dan of gelijk aan 2024-01-01, 
                 dan moet planstatus zijn 'vastgesteld'.
             </iso:assert>
         </iso:rule>
@@ -180,7 +180,7 @@
                 "> 
                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
                 type = <iso:value-of select="name()"/>: 
-                Fout in typePlan -> Als typePlan is 'amvb' of 'regeling' en datum is groter dan of gelijk aan 2024-01-01, 
+                Fout: als typePlan is 'amvb' of 'regeling' en datum is groter dan of gelijk aan 2024-01-01, 
                 dan mag typePlan niet zijn 'amvb' of 'regeling'.
             </iso:assert>
         </iso:rule>
@@ -200,7 +200,7 @@
                 "> 
                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
                 type = <iso:value-of select="name()"/>: 
-                Fout in typePlan -> Als typePlan is 'provinciale verordening' en datum is groter dan of gelijk aan 2024-01-01, 
+                Fout: als typePlan is 'provinciale verordening' en datum is groter dan of gelijk aan 2024-01-01, 
                 dan mag typePlan niet zijn 'provinciale verordening', tenzij naam begint met 'TAM-omgevingsverordening '.
             </iso:assert>
         </iso:rule>
@@ -221,7 +221,7 @@
                 "> 
                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
                 type = <iso:value-of select="name()"/>: 
-                Fout in typePlan -> Als typePlan is 'reactieve aanwijzing' en datum is groter dan of gelijk aan 2024-01-01,  
+                Fout: als typePlan is 'reactieve aanwijzing' en datum is groter dan of gelijk aan 2024-01-01,  
                 dan mag typePlan niet zijn 'reactieve aanwijzing', tenzij naam begint met 'TAM-reactieve interventie '.
             </iso:assert>
         </iso:rule>
@@ -247,7 +247,7 @@
                 "> 
                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
                 type = <iso:value-of select="name()"/>: 
-                Fout in typePlan -> Als typePlan is 'beheersverordening' en datum is groter dan of gelijk aan 2024-01-01, 
+                Fout: als typePlan is 'beheersverordening' en datum is groter dan of gelijk aan 2024-01-01, 
                 dan mag typePlan niet zijn 'beheersverordening', tenzij naam begint met 'Chw bestemmingsplan ' en status is gelijk aan 'vastgesteld' of 'geconsolideerd'.
             </iso:assert>
         </iso:rule>
@@ -279,7 +279,7 @@
                 "> 
                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>,
                 type = <iso:value-of select="name()"/>: 
-                Vanaf 1 januari 2025 mogen het Rijk en de provincies hun Omgevingswet voorbereidingsbesluiten niet meer publiceren op basis van TAM. 
+                Fout: vanaf 1 januari 2025 mogen het Rijk en de provincies hun Omgevingswet voorbereidingsbesluiten niet meer publiceren op basis van TAM. 
             </iso:assert>
         </iso:rule>
         
@@ -305,7 +305,7 @@
                 ">
                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
                 type = <iso:value-of select="name()"/>: 
-                Fout in planstatus -> Als typePlan is 'exploitatieplan' en datum is groter dan of gelijk aan 2024-01-01, 
+                Fout: als typePlan is 'exploitatieplan' en datum is groter dan of gelijk aan 2024-01-01, 
                 dan mag planstatus niet zijn 'ontwerp', 'concept' of 'voorontwerp'.
             </iso:assert>
         </iso:rule>
@@ -335,7 +335,7 @@
                  "> 
                  IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
                  type = <iso:value-of select="name()"/>: 
-                 Vanaf 1 januari 2025 mag een gemeente alleen een vastgestelde omgevingsvisie publiceren op basis van het Wro plantype structuurvisie publiceren als voor 1 januari 2025 de procedure is aangevangen.
+                 Fout: vanaf 1 januari 2025 mag een gemeente alleen een vastgestelde omgevingsvisie publiceren op basis van het Wro plantype structuurvisie publiceren als voor 1 januari 2025 de procedure is aangevangen.
                  </iso:assert>
          </iso:rule>
         
@@ -348,8 +348,7 @@
                 "> 
                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
                 type = <iso:value-of select="name()"/>: 
-                Fout in typePlan -> Als typePlan is 'structuurvisie' en datum is groter dan of gelijk aan 2024-01-01, 
-                dan mag typePlan niet zijn 'structuurvisie'. 
+                Fout: een document met typePlan is 'structuurvisie' met datum na 2024-01-01 is niet toegestaan. 
             </iso:assert>
         </iso:rule>
         
@@ -362,8 +361,7 @@
                 "> 
                 IMRO-object met gml:id <iso:value-of select="@gml:id"/>, 
                 type = <iso:value-of select="name()"/>: 
-                Fout in typePlan -> Als typePlan is 'structuurvisie' en datum is groter dan of gelijk aan 2024-01-01, 
-                dan mag typePlan niet zijn 'structuurvisie'. 
+                Fout: een document met typePlan is 'structuurvisie' met datum na 2024-01-01 is niet toegestaan. 
             </iso:assert>
         </iso:rule>   
         
