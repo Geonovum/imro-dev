@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 /*******************************************************************************
- * File: additional-validator-rules2012v0.07.sch
+ * File: additional-validator-rules2012v0.qw.sch
  * (C) Logica, 2011
- * 2018: Geonovum, Thijs Brentjens
+ * 2018: Geonovum, Thijs Brentjens (TB)
+ * 2024: Geonovum, Wilko Quak (WQ)
  *
  * Info:
- * Extra Schematron Validation Document for IMRO 2012
+ * Extra Schematron Validation Document for IMRO 2012 die voortvloeien uit de invoering van de omgevingswet.
+ * Deze regels worden in dit schematron document beheerd maar aan het Kadaster uitgeleverd door de inhoud
+ * van dit bestand vanaf de regel met 'BEGIN Validaties' tot en met de regel met 'EINDE Validaties' te 
+ * kopieren naar het bestaand 'additional-validator-rules-2012vXXX.sch'
  *
  * History:
  * 21-09-2011   RD  Initial version
@@ -29,11 +33,8 @@
  * 21-03-2023   AdB Datum inwerkingtreding Ow aangepast na instemming : 01-07-2023 ==> 01-01-2024 
  * 28-11-2023   AdB Blokkeren structuurvisie + beheersoverordening, tenzij naam  'Chw bestemmingsplan ' én status 'vastgesteld' of 'geconsolideerd'
  * 26-02-2024   AdB Toestaan gemeentelijke structuurvisie met status 'ontwerp' na 2024-01-01 
- * 22-11-2024   WQ  Nieuwe regels toevoegen voor 2025
-  ******************************************************************************/
-
-Opmerkingen / hints:
-
+ * 22-11-2024   WQ  Regels aangepast voor 2025, documentatie aangepast
+ ******************************************************************************/
 -->
 <iso:schema xmlns:iso="http://purl.oclc.org/dsdl/schematron"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:str="http://exslt.org/strings"
@@ -367,5 +368,5 @@ Opmerkingen / hints:
         </iso:rule>   
         
     </iso:pattern>
-    
+    <!-- EINDE Validaties t.b.v. Tijdelijke Alternatieve Maatregel c.q. Overgangsrecht Omgevingswet -->
 </iso:schema>
