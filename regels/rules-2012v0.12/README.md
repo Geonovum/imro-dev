@@ -76,7 +76,7 @@ Check of 1 van de volgende regels geldt:
 - Datum \>= ‘2024-01-01’ EN planstatus zit in (vastegsteld, geconsolideerd) en plannaam is niet 'TAM-omgevingsplan[spatie][plannaam]'
 - Datum \>= ‘2024-01-01’ EN plannam='TAM-omgevingsplan[spatie][plannaam]'
 
-Anders geef foutmelding:
+Anders geef foutmelding.
 
 ### exploitatieplan
 
@@ -115,14 +115,14 @@ Check of aan 1 van de volgende eisen is voldaan
 - Datum > ‘2025-01-01’ en plannaam= 'TAM-projectbesluit  en verantwoordelijke is niet rijk
 - Datum > ‘2025-01-01’ en plannaam= 'TAM-projectbesluit  en verantwoordelijke is rijk en planstatus <> ontwerp.
 
-Anders geef foutmelding:
+Anders geef foutmelding.
 
 ### omgevingsvergunning
 
 Wabo instrument. Opvolger in Ow: omgevingsvergunning voor een buitenplanse
 omgevingsplanactiviteit (BOPA).
 
--   geen aanpassing validatieregels.
+- geen aanpassing validatieregels.
 
 ### projectbesluit
 
@@ -134,6 +134,7 @@ Dit is een voormalig Wro instrument voor gemeenten, provincies en het Rijk; met 
 
 Dit plantype wordt door TAM gebruikt voor het Omgevingswet instrument
 omgevingsverordening.
+
 - nieuwe upload blokkeren per 1-1-2024;
 - tenzij vanaf 1-1-2024 plannaam= 'TAM-omgevingsverordening[spatie][plannaam]'.
 
@@ -141,6 +142,7 @@ omgevingsverordening.
 
 Dit plantype wordt door TAM gebruikt voor het Omgevingswet instrument reactieve
 interventie.
+
 - nieuwe upload blokkeren per 1-1-2024;
 - tenzij vanaf 1-1-2024 plannaam= 'TAM-reactieve interventie[spatie][plannaam]'.
 
@@ -149,7 +151,7 @@ interventie.
 Dit is het Wro instrument voluit ministeriele regeling; in IMRO2012 geduid als
 regeling.
 
--   nieuwe upload blokkeren per 1-1-2024.
+- nieuwe upload blokkeren per 1-1-2024.
 
 ### structuurvisie
 
@@ -174,7 +176,6 @@ Controleer of aan 1 van de volgende eisen is voldaan:
 
 Anders geef foutmelding
 
-
 ### tijdelijke ontheffing buitenplans
 
 Dit is een voormalig Wro instrument; met iwt Wabo omgevingsvergunning geworden.
@@ -187,6 +188,7 @@ daarvoor in de plaats de omgevingsvergunning.
 
 Onderdeel van overgangsrecht: afmaken bestemmingsplan procedure na iwt
 Omgevingswet.
+
 - vanaf 1-1-2024 doorlaten als planstatus= 'vastgesteld', anders upload
     blokkeren.
 
@@ -256,7 +258,6 @@ De context gaat over welke type plannen er zijn.
 
 De plandatum is een veld in het plan. Het is dus niet de datum waarop het plan is aangeleverd. Er kunnen plannen met een datum in het verleden worden ingediend. Hoewel ieder datum valide is zijn er in de regels in principe drie ranges. Voor veel regels zijn de laatste twee ranges samengepakt.   
 
-
 | Plandatum                      |
 | ------------------------------ |
 | \< 2024-01-01                  |
@@ -277,9 +278,6 @@ Dit is een enumeratie uit het schema. Veel regels gelden voor een subset van de 
 
 ### Type overheid
 
-Nog nooit een regel over 'deelgemeente/stadsdeel' gezien. Ik wist eigenlijk niet dat die bestond en heb wel eens 'ongelijk aan nationale overheid' gezet als ik bedoelde 'provinciale- of gemeentelijk overheid'.
-
-
 | Type Overheid          |
 | ---------------------- |
 | gemeentelijke overheid |
@@ -287,9 +285,11 @@ Nog nooit een regel over 'deelgemeente/stadsdeel' gezien. Ik wist eigenlijk niet
 | provinciale overheid   |
 | nationale overheid     |
 
+Deelgemeente komt eigenlijk nooit voor.
+
 ### Plannaam
 
-In specifieke contexten heeft een plannaam een betekenis. De regels zijn anders voor als de plannaam begint met de gegeven tekst. Dit is het setje waar ik me in de regels nog het meest zorgen om maak. 
+In specifieke contexten heeft een plannaam een betekenis. De regels zijn anders voor als de plannaam begint met de gegeven tekst.
 
 | Plannaam                  | Context                                                           |
 | ------------------------- | ----------------------------------------------------------------- |
