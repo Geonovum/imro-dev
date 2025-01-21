@@ -42,6 +42,7 @@
  * 26-02-2024   AdB Toestaan gemeentelijke structuurvisie met status 'ontwerp' na 2024-01-01 
  * 27-11-2024   WQ  Kopie van versie 0.11. Versienummers aangepast en extra uitleg toegevoegd.
  * 28-11-2024   WQ  Regels uit TAM-imro2012-v0.12.sch gekopieerd.
+ * 21-01-2025   WQ  Regel voor reactieve interventie verwijderd.
  ******************************************************************************/
 
 Opmerkingen / hints:
@@ -935,10 +936,14 @@ Geometrie waarnaar verwezen wordt bevat: Surfaces: <iso:value-of select="$begren
                 dan mag typePlan niet zijn 'provinciale verordening', tenzij naam begint met 'TAM-omgevingsverordening '.
             </iso:assert>
         </iso:rule>
-        
+		
+        <!-- Deze is op 2025-01-21 tussen commentaarhaken gezet omdat het overgangsrecht het toepassen van
+		      een reactieve aanwijzing na 01-01-2024 nog wel toestaat als het bestemmingsplan waar deze op
+			  van toepassings is nog in procedure is. Om deze reden laten we reactieve aanwijzingen doorgaan -->
         <!-- Blokkeren REACTIEVE AANWIJZING, tenzij TAM-REACTIEVE AANWIJZING-->
         <!-- Na 2024-01-01 mag voor objecttype Besluitgebied_X typePlan niet zijn 'reactieve aanwijzing', tenzij naam begint met 'TAM-reactieve interventie  '-->
-        <iso:rule
+        <!--
+		<iso:rule
             context="//imro:Besluitgebied_X[//imro:typePlan = 'reactieve aanwijzing']">
             <iso:assert
                 test="
@@ -956,7 +961,8 @@ Geometrie waarnaar verwezen wordt bevat: Surfaces: <iso:value-of select="$begren
                 dan mag typePlan niet zijn 'reactieve aanwijzing', tenzij naam begint met 'TAM-reactieve interventie '.
             </iso:assert>
         </iso:rule>
-        
+        -->
+
         <!-- Blokkeren BEHEERSVERORDENING-->
         <!-- Na 2024-01-01 mag voor objecttype Besluitgebied_X typePlan niet zijn 'beheersverordening'-->
         <iso:rule
