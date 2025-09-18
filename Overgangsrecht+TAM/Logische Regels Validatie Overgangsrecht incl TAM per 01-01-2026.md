@@ -1,15 +1,15 @@
 # Logische regels validatie Wro instrumenten overgangsrecht inclusief tijdelijke alternatieve maatregelen (TAM)
 
-Werkversie 11 september 2025
+Werkversie 18 september 2025
 
 Ten opzichte van de vorige versie (19 december 2024) zijn logische regels gewijzigd voor: 
 
-- **aanwijzingsbesluit**: xx;
-- **Bestemmingsplan**: xx;
-- **inpassingsplan**: xx;
-- **provinciale verordening**: xx;
-- **reactieve aanwijzing**: xx;
-- **voorbereidingsbesluit**: xx;
+- **aanwijzingsbesluit**: per 1-1-2026 blokkeren voor zowel Rijk als de Provincie
+- **bestemmingsplan**: per 1-1-2026 als plannaam= 'TAM-omgevingsplan[spatie][plannaam]' en planstatus ‘ontwerp’ blokkeren;
+- **inpassingsplan**: naast voor Rijk per 1-1-2026 ook voor provincies als plannaam= 'TAM-projectbesluit[spatie][plannaam]' en planstatus ‘ontwerp’ blokkeren;
+- **provinciale verordening**: per 1-1-2026 als plannaam= 'TAM-omgevingsverordening[spatie][plannaam] en planstatus ‘ontwerp’ nieuwe upload blokkeren;
+- **reactieve aanwijzing**: per 1-1-2026 als plannaam= 'TAM-reactieve interventie[spatie][plannaam]' en planstatus ‘ontwerp’ nieuwe upload blokkeren;
+- **voorbereidingsbesluit**: per 1-1-2026 upload blokkeren voor Rijk, provincies en gemeenten;
 
 
 ## Uitgangspunten
@@ -17,9 +17,9 @@ Ten opzichte van de vorige versie (19 december 2024) zijn logische regels gewijz
 Validatieregels overgangsrecht inclusief TAM's zijn aanvullend op de huidige
 validaties van IMRO, STRI etc., versies 2012, 2008 etc. om herlaad acties in
 Ruimtelijkeplannen.nl te blijven ondersteunen na inwerkingtreden  van
-de Omgevingswet op 1 januari 2024 en de wijziging van het Besluit elektronische publicaties (Bep)per 1 januari 2025. 
+de Omgevingswet op 1 januari 2024 en de wijziging van het Besluit elektronische publicaties (Bep) per 1 januari 2025. 
 
-## Overgangsrecht Wro, inclusief TAM's, ten behoeve van inwerkingtreden Omgevingswet
+## Overgangsrecht Wro, inclusief TAM's, sinds inwerkingtreden Omgevingswet
 
 Alle Wro instrumenten op alfabetische volgorde, inclusief het gebruik van TAM's.
 
@@ -27,10 +27,10 @@ Alle Wro instrumenten op alfabetische volgorde, inclusief het gebruik van TAM's.
 
 Onderdeel van het overgangsrecht: afmaken bestemmingsplan procedure na inwerkingtreden 
 Omgevingswet. Dit plantype wordt ook door TAM gebruikt voor het Omgevingswet
-instrument instructie. Validatieregels aangepast per 1-1-2026 aangepast ivm wijziging Bep 
-TAM-instructie kan niet meer worden gebruikt.
+instrument instructie. Validatieregels aangepast per 1-1-2025 aangepast ivm wijziging Bep 
+TAM-instructie kan niet meer worden gebruikt voor het Rijk. Per 1-1-2026 geldt dit ook voor de provincies.
 
-- nieuwe upload blokkeren per 1-1-2026.
+- nieuwe upload blokkeren voor zowel Rijk als Provincie per 1-1-2026.
 
 ### amvb
 
@@ -59,7 +59,6 @@ is wel mogelijk na 01-01-2026.
 - tenzij vanaf 1-1-2024 plannaam= 'TAM-omgevingsplan[spatie][plannaam]';
 - als plannaam= 'TAM-omgevingsplan[spatie][plannaam]' en planstatus ‘ontwerp’ blokkeren per 1-1-2026
  
-
 ### exploitatieplan
 
 Onderdeel van overgangsrecht: afmaken bestemmingsplan procedure na inwerkingtreden 
@@ -86,7 +85,7 @@ Wro inpassingsplan is een bestemmingsplan dat alleen door het Rijk en provincie
 kan worden gepubliceerd tot inwerkingtreden  Omgevingswet. De procedure moet worden kunnen
 afgemaakt onder Wro na inwerkingtreding. Dit plantype wordt door TAM gebruikt
 voor het Omgevingswet instrument projectbesluit. Door wijziging van het Bep per 1-1-2025 kan 
-TAM niet meer worden gebruikt door het Rijk en per 1-1-2026 ok niet meer door de provincie.
+TAM niet meer worden gebruikt door het Rijk en de provincies per 1-1-2026.
 
 - planstatus 'ontwerp' blokkeren per 1-1-2024
 - per 1-1-2024 doorlaten als planstatus= 'vastgesteld', anders blokkeren';
@@ -95,12 +94,12 @@ TAM niet meer worden gebruikt door het Rijk en per 1-1-2026 ok niet meer door de
 - voor Provincie als plannaam= 'TAM-projectbesluit[spatie][plannaam]' en planstatus ‘ontwerp’ blokkeren per 1-1-2026. 
 
 In de context van inpassingsplan tbv wijziging Bep en de TAM-projectbesluit:
-Check of aan 1 van de volgende eisen is voldaan
+Check of aan 1 van de volgende eisen is voldaan:
 - Datum < ‘2024-01-01’
 - Datum >= ‘2024-01-01’ en plannaam niet ‘TAM-projectbesluit ’ en planstatus = ‘vastgesteld’
 - Datum tussen >= ‘2024-01-01' en 2025-01-01  en plannaam= 'TAM-projectbesluit’  
 - Datum > ‘2025-01-01’ en plannaam= 'TAM-projectbesluit’ en verantwoordelijke is niet rijk.
-- Datum > ‘2025-01-01’ en plannaam= 'TAM-projectbesluit’ en verantwoordelijke is rijk en planstatus <> ontwerp.
+- Datum > ‘2025-01-01’ en plannaam= 'TAM-projectbesluit’ en verantwoordelijke is Rijk en planstatus <> ontwerp.
 - Datum > ‘2026-01-01’ en plannaam= 'TAM-projectbesluit’ en verantwoordelijke is Provincie en planstatus <> ontwerp.
 
 ### omgevingsvergunning
@@ -118,12 +117,11 @@ Dit is een voormalig Wro instrument voor gemeenten, provincies en het Rijk; met 
 
 ### provinciale verordening
 
-Dit plantype wordt door TAM gebruikt voor het Omgevingswet instrument
-omgevingsverordening.
+Dit plantype wordt door TAM gebruikt voor het Omgevingswet instrument omgevingsverordening.
 
 - nieuwe upload blokkeren per 1-1-2024;
 - tenzij vanaf 1-1-2024 plannaam= 'TAM-omgevingsverordening[spatie][plannaam]';
-- als plannaam= 'TAM-omgevingsverordening[spatie][plannaam] nieuwe upload blokkeren per 1-1-2026.
+- als plannaam= 'TAM-omgevingsverordening[spatie][plannaam] en planstatus ‘ontwerp’ nieuwe upload blokkeren per 1-1-2026.
 
 ### reactieve aanwijzing
 
@@ -131,7 +129,7 @@ Dit plantype wordt door TAM gebruikt voor het Omgevingswet instrument reactieve 
 
 - nieuwe upload blokkeren per 1-1-2024;
 - tenzij vanaf 1-1-2024 plannaam= 'TAM-reactieve interventie[spatie][plannaam]'.
-- als plannaam= 'TAM-reactieve interventie[spatie][plannaam]' nieuwe upload blokkeren per 1-1-2026.
+- als plannaam= 'TAM-reactieve interventie[spatie][plannaam]' en planstatus ‘ontwerp’ nieuwe upload blokkeren per 1-1-2026.
 
 ### regeling
 
@@ -185,21 +183,10 @@ TAM-voorbereidingsbesluit kunnen gebruiken. Met ingang van 1-1-2026 mogen ook de
 geen gebruik meer maken van het TAM-voorbereidingsbesluit wat inhoud dat alle voorbereidingsbesluiten 
 vanaf 1-1-2026 moeten worden tegengehouden.  
 
-- nieuwe upload blokkeren per 1-1-2024;
-- tenzij vanaf 1-1-2024 plannaam= 'TAM-voorbereidingsbesluit[spatie][plannaam]'.
 - nieuwe upload blokkeren per 1-1-2025 plantype voorbereidingsbesluit van provincies
     (_P) en het Rijk (_R).
-  - nieuwe upload blokkeren per 1-1-2026 plantype voorbereidingsbesluit van gemeenten
+- nieuwe upload blokkeren per 1-1-2026 plantype voorbereidingsbesluit van gemeenten
     (_G). 
-
-In de context van imro:Besluitgebied_X[//imro:typePlan = 'voorbereidingsbesluit'
-Controleer of aan 1 van de volgende eisen is voldaan
-
-- Datum < ‘2024-01-01’
-- Datum tussen 2024-01-01 en 2025-01-01 en plannaam= 'TAM-voorbereidingsbesluit’
-- Datum na 2025-01-01 en en verantwoordelijke = gemeente en planstatus = 'vastgesteld'
-
-Anders geef foutmelding.
 
 ### wijzigingsplan
 
