@@ -138,11 +138,11 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>Overgangsrecht+TAM/validatie_testbestanden_2025/RW-2025-2a.gml</String>
+                                    <String>Overgangsrecht+TAM/validatie_testbestanden_per01012026/aanwijzingsbesluit/20250101/BSGX-004_aanwijzigingsbesluit_rijk_20250101_fout.gml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>RW-2025-2a</String>
+                                        <String>TAM IMRO validatie V14</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -158,11 +158,11 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>regels/rules-2012v0.12-werkversie/TAM-imro2012-v0.12.sch</String>
+                                    <String>Overgangsrecht+TAM/validatie_testbestanden_per01012026/aanwijzingsbesluit/20250101/BSGX-004_aanwijzigingsbesluit_provincie_20250101_goed.gml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>TAM-imro2012-v0.12</String>
+                                        <String>TAM IMRO validatie V14</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -178,111 +178,11 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>Overgangsrecht+TAM/validatie_testbestanden_TAM-uitgebreid/bestemmingsplan/1e_IOW_weigeren_planstatus_concept/NL.IMRO.1930.BPRaadhuislaanSP-1001.gml</String>
+                                    <String>Overgangsrecht+TAM/validatie_testbestanden_per01012026/aanwijzingsbesluit/20233112/BSGX-004_aanwijzigingsbesluit_provincie_20231231_goed.gml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>TAM IMRO validatie</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>Validation_scenario</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>Overgangsrecht+TAM/validatie_testbestanden_TAM-uitgebreid/bestemmingsplan/2a_IOW_TAM_toestaan/NL.IMRO.0200.bp1416-ont1.gml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TAM IMRO validatie</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>Validation_scenario</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>Overgangsrecht+TAM/validatie_testbestanden_TAM-uitgebreid/bestemmingsplan/1d_IOW_weigeren_planstatus_voorontwerp/NL.IMRO.1930.BPRaadhuislaanSP-1001.gml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TAM IMRO validatie</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>Validation_scenario</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>Overgangsrecht+TAM/validatie_testbestanden_TAM-uitgebreid/beheersverordening/1a_datum%20voor_IOW/NL.IMRO.0106.99BHV2020180B-C001.gml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TAM IMRO validatie</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>Validation_scenario</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>regels/rules-2012v0.09/additional-validator-rules-2012v0.09-b-RC.sch</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TAM IMRO validatie</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>Validation_scenario</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>regels/rules-2012v0.12-werkversie/TAM-imro2012-v0.11.sch</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TAM IMRO validatie</String>
+                                        <String>TAM IMRO validatie V14</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -332,49 +232,6 @@
                                                 <null/>
                                             </field>
                                             <field name="validationSchema">
-                                                <null/>
-                                            </field>
-                                        </validationUnit>
-                                    </list>
-                                </field>
-                                <field name="type">
-                                    <String>Validation_scenario</String>
-                                </field>
-                                <field name="name">
-                                    <String>RW-2025-2a</String>
-                                </field>
-                            </validationScenario>
-                            <validationScenario>
-                                <field name="pairs">
-                                    <list>
-                                        <validationUnit>
-                                            <field name="validationType">
-                                                <validationUnitType>
-                                                    <field name="validationInputType">
-                                                        <String>text/xml</String>
-                                                    </field>
-                                                </validationUnitType>
-                                            </field>
-                                            <field name="url">
-                                                <String>${currentFileURL}</String>
-                                            </field>
-                                            <field name="validationEngine">
-                                                <validationEngine>
-                                                    <field name="engineType">
-                                                        <String>&lt;Default engine></String>
-                                                    </field>
-                                                    <field name="allowsAutomaticValidation">
-                                                        <Boolean>true</Boolean>
-                                                    </field>
-                                                </validationEngine>
-                                            </field>
-                                            <field name="allowAutomaticValidation">
-                                                <Boolean>true</Boolean>
-                                            </field>
-                                            <field name="extensions">
-                                                <null/>
-                                            </field>
-                                            <field name="validationSchema">
                                                 <validationUnitSchema>
                                                     <field name="dtdSchemaPublicID">
                                                         <null/>
@@ -386,7 +243,7 @@
                                                         <Integer>7</Integer>
                                                     </field>
                                                     <field name="uri">
-                                                        <String>${pdu}/regels/rules-2012v0.12-werkversie/TAM-imro2012-v0.12.sch</String>
+                                                        <String>${pdu}/regels/rules-2012v0.14/TAM-imro2012-v0.14.sch</String>
                                                     </field>
                                                 </validationUnitSchema>
                                             </field>
@@ -397,50 +254,7 @@
                                     <String>Validation_scenario</String>
                                 </field>
                                 <field name="name">
-                                    <String>TAM IMRO validatie</String>
-                                </field>
-                            </validationScenario>
-                            <validationScenario>
-                                <field name="pairs">
-                                    <list>
-                                        <validationUnit>
-                                            <field name="validationType">
-                                                <validationUnitType>
-                                                    <field name="validationInputType">
-                                                        <String>text/sch</String>
-                                                    </field>
-                                                </validationUnitType>
-                                            </field>
-                                            <field name="url">
-                                                <String>${currentFileURL}</String>
-                                            </field>
-                                            <field name="validationEngine">
-                                                <validationEngine>
-                                                    <field name="engineType">
-                                                        <String>&lt;Default engine></String>
-                                                    </field>
-                                                    <field name="allowsAutomaticValidation">
-                                                        <Boolean>true</Boolean>
-                                                    </field>
-                                                </validationEngine>
-                                            </field>
-                                            <field name="allowAutomaticValidation">
-                                                <Boolean>true</Boolean>
-                                            </field>
-                                            <field name="extensions">
-                                                <null/>
-                                            </field>
-                                            <field name="validationSchema">
-                                                <null/>
-                                            </field>
-                                        </validationUnit>
-                                    </list>
-                                </field>
-                                <field name="type">
-                                    <String>Validation_scenario</String>
-                                </field>
-                                <field name="name">
-                                    <String>TAM-imro2012-v0.12</String>
+                                    <String>TAM IMRO validatie V14</String>
                                 </field>
                             </validationScenario>
                         </validationScenario-array>
@@ -449,7 +263,7 @@
             </serialized>
         </options>
     </meta>
-    <projectTree name="irmo-dev.xpr">
+    <projectTree name="imro-dev.xpr">
         <folder path="."/>
     </projectTree>
 </project>
